@@ -28,15 +28,8 @@
       --max-width: 1100px;
     }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
 
     body {
       font-family: var(--font-sans);
@@ -73,18 +66,14 @@
       color: var(--accent-green);
     }
 
-    .nav-logo .cursor {
-      animation: blink 1s step-end infinite;
-    }
-
-    @keyframes blink {
-      50% { opacity: 0; }
-    }
+    .nav-logo .cursor { animation: blink 1s step-end infinite; }
+    @keyframes blink { 50% { opacity: 0; } }
 
     .nav-links {
       display: flex;
       gap: 1.5rem;
       list-style: none;
+      align-items: center;
     }
 
     .nav-links a {
@@ -95,9 +84,7 @@
       transition: color 0.2s;
     }
 
-    .nav-links a:hover {
-      color: var(--accent);
-    }
+    .nav-links a:hover { color: var(--accent); }
 
     .nav-hamburger {
       display: none;
@@ -106,6 +93,35 @@
       color: var(--text-primary);
       font-size: 1.5rem;
       cursor: pointer;
+    }
+
+    /* Language Switcher */
+    .lang-switch {
+      display: inline-flex;
+      background: var(--bg-tertiary);
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      overflow: hidden;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+    }
+
+    .lang-btn {
+      padding: 0.3rem 0.6rem;
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .lang-btn.active {
+      background: var(--accent);
+      color: var(--bg-primary);
+    }
+
+    .lang-btn:hover:not(.active) {
+      color: var(--text-primary);
     }
 
     /* ========== HERO ========== */
@@ -121,10 +137,7 @@
     .hero::before {
       content: '';
       position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
+      inset: 0;
       background:
         radial-gradient(ellipse at 20% 50%, rgba(88, 166, 255, 0.08) 0%, transparent 50%),
         radial-gradient(ellipse at 80% 20%, rgba(188, 140, 255, 0.06) 0%, transparent 50%);
@@ -154,12 +167,7 @@
       border-bottom: 1px solid var(--border-color);
     }
 
-    .terminal-dot {
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-    }
-
+    .terminal-dot { width: 12px; height: 12px; border-radius: 50%; }
     .terminal-dot.red { background: var(--accent-red); }
     .terminal-dot.yellow { background: var(--accent-orange); }
     .terminal-dot.green { background: var(--accent-green); }
@@ -205,10 +213,7 @@
     .value { color: var(--text-primary); }
     .comment { color: var(--text-muted); }
 
-    .hero-intro {
-      margin-top: 2.5rem;
-      max-width: 600px;
-    }
+    .hero-intro { margin-top: 2.5rem; max-width: 600px; }
 
     .hero-intro h1 {
       font-size: 2.5rem;
@@ -217,9 +222,7 @@
       margin-bottom: 0.5rem;
     }
 
-    .hero-intro h1 .accent {
-      color: var(--accent);
-    }
+    .hero-intro h1 .accent { color: var(--accent); }
 
     .hero-intro .subtitle {
       font-size: 1.15rem;
@@ -227,11 +230,7 @@
       margin-bottom: 1.5rem;
     }
 
-    .hero-cta {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
+    .hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; }
 
     .btn {
       display: inline-flex;
@@ -246,35 +245,14 @@
       border: 1px solid transparent;
     }
 
-    .btn-primary {
-      background: var(--accent);
-      color: var(--bg-primary);
-    }
-
-    .btn-primary:hover {
-      background: #79c0ff;
-    }
-
-    .btn-outline {
-      border-color: var(--border-color);
-      color: var(--text-primary);
-      background: transparent;
-    }
-
-    .btn-outline:hover {
-      border-color: var(--accent);
-      color: var(--accent);
-    }
+    .btn-primary { background: var(--accent); color: var(--bg-primary); }
+    .btn-primary:hover { background: #79c0ff; }
+    .btn-outline { border-color: var(--border-color); color: var(--text-primary); background: transparent; }
+    .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
 
     /* ========== SECTIONS ========== */
-    section {
-      padding: 5rem 1.5rem;
-    }
-
-    .section-inner {
-      max-width: var(--max-width);
-      margin: 0 auto;
-    }
+    section { padding: 5rem 1.5rem; }
+    .section-inner { max-width: var(--max-width); margin: 0 auto; }
 
     .section-header {
       display: flex;
@@ -283,16 +261,8 @@
       margin-bottom: 2.5rem;
     }
 
-    .section-header h2 {
-      font-size: 1.5rem;
-      font-weight: 600;
-    }
-
-    .section-header .line {
-      flex: 1;
-      height: 1px;
-      background: var(--border-color);
-    }
+    .section-header h2 { font-size: 1.5rem; font-weight: 600; }
+    .section-header .line { flex: 1; height: 1px; background: var(--border-color); }
 
     .section-number {
       font-family: var(--font-mono);
@@ -301,9 +271,7 @@
     }
 
     /* ========== PROFILE ========== */
-    #profile {
-      border-top: 1px solid var(--border-color);
-    }
+    #profile { border-top: 1px solid var(--border-color); }
 
     .profile-content {
       display: grid;
@@ -341,9 +309,7 @@
       font-size: 0.9rem;
     }
 
-    .detail-row:last-child {
-      border-bottom: none;
-    }
+    .detail-row:last-child { border-bottom: none; }
 
     .detail-key {
       color: var(--accent);
@@ -351,24 +317,12 @@
       font-size: 0.8rem;
     }
 
-    .detail-value {
-      color: var(--text-primary);
-      text-align: right;
-    }
-
-    .detail-value a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    .detail-value a:hover {
-      text-decoration: underline;
-    }
+    .detail-value { color: var(--text-primary); text-align: right; }
+    .detail-value a { color: var(--accent); text-decoration: none; }
+    .detail-value a:hover { text-decoration: underline; }
 
     /* ========== SKILLS ========== */
-    #skills {
-      border-top: 1px solid var(--border-color);
-    }
+    #skills { border-top: 1px solid var(--border-color); }
 
     .skills-grid {
       display: grid;
@@ -384,9 +338,7 @@
       transition: border-color 0.3s;
     }
 
-    .skill-category:hover {
-      border-color: var(--accent);
-    }
+    .skill-category:hover { border-color: var(--accent); }
 
     .skill-category h3 {
       font-family: var(--font-mono);
@@ -397,11 +349,7 @@
       letter-spacing: 1px;
     }
 
-    .skill-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-    }
+    .skill-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
 
     .skill-tag {
       display: inline-flex;
@@ -417,16 +365,8 @@
       transition: all 0.2s;
     }
 
-    .skill-tag:hover {
-      border-color: var(--accent);
-      background: rgba(88, 166, 255, 0.08);
-    }
-
-    .skill-tag .dot {
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-    }
+    .skill-tag:hover { border-color: var(--accent); background: rgba(88, 166, 255, 0.08); }
+    .skill-tag .dot { width: 6px; height: 6px; border-radius: 50%; }
 
     .dot-blue { background: var(--accent); }
     .dot-green { background: var(--accent-green); }
@@ -436,14 +376,9 @@
     .dot-cyan { background: var(--accent-cyan); }
 
     /* ========== EXPERIENCE ========== */
-    #experience {
-      border-top: 1px solid var(--border-color);
-    }
+    #experience { border-top: 1px solid var(--border-color); }
 
-    .timeline {
-      position: relative;
-      padding-left: 2rem;
-    }
+    .timeline { position: relative; padding-left: 2rem; }
 
     .timeline::before {
       content: '';
@@ -479,9 +414,7 @@
       box-shadow: 0 0 8px rgba(63, 185, 80, 0.4);
     }
 
-    .timeline-header {
-      margin-bottom: 0.75rem;
-    }
+    .timeline-header { margin-bottom: 0.75rem; }
 
     .timeline-header h3 {
       font-size: 1.05rem;
@@ -489,10 +422,7 @@
       color: var(--text-primary);
     }
 
-    .timeline-header .company {
-      color: var(--accent);
-      font-weight: 500;
-    }
+    .timeline-header .company { color: var(--accent); font-weight: 500; }
 
     .timeline-header .meta {
       display: flex;
@@ -503,10 +433,7 @@
       font-family: var(--font-mono);
     }
 
-    .timeline-body ul {
-      list-style: none;
-      padding: 0;
-    }
+    .timeline-body ul { list-style: none; padding: 0; }
 
     .timeline-body li {
       position: relative;
@@ -526,15 +453,10 @@
       font-size: 0.8rem;
     }
 
-    .highlight {
-      color: var(--accent-orange);
-      font-weight: 500;
-    }
+    .highlight { color: var(--accent-orange); font-weight: 500; }
 
     /* ========== EDUCATION ========== */
-    #education {
-      border-top: 1px solid var(--border-color);
-    }
+    #education { border-top: 1px solid var(--border-color); }
 
     .education-grid {
       display: grid;
@@ -550,14 +472,8 @@
       transition: border-color 0.3s;
     }
 
-    .education-card:hover {
-      border-color: var(--accent);
-    }
-
-    .education-card h3 {
-      font-size: 1rem;
-      margin-bottom: 0.25rem;
-    }
+    .education-card:hover { border-color: var(--accent); }
+    .education-card h3 { font-size: 1rem; margin-bottom: 0.25rem; }
 
     .education-card .institution {
       color: var(--accent);
@@ -579,9 +495,7 @@
     }
 
     /* ========== EXTRA-CURRICULAR ========== */
-    #extra {
-      border-top: 1px solid var(--border-color);
-    }
+    #extra { border-top: 1px solid var(--border-color); }
 
     .extra-grid {
       display: grid;
@@ -597,19 +511,9 @@
       transition: border-color 0.3s;
     }
 
-    .extra-card:hover {
-      border-color: var(--accent-purple);
-    }
-
-    .extra-card h3 {
-      font-size: 0.95rem;
-      margin-bottom: 0.15rem;
-    }
-
-    .extra-card .company {
-      color: var(--accent-purple);
-      font-size: 0.85rem;
-    }
+    .extra-card:hover { border-color: var(--accent-purple); }
+    .extra-card h3 { font-size: 0.95rem; margin-bottom: 0.15rem; }
+    .extra-card .company { color: var(--accent-purple); font-size: 0.85rem; }
 
     .extra-card .dates {
       font-family: var(--font-mono);
@@ -625,10 +529,7 @@
       margin-bottom: 0.5rem;
     }
 
-    .extra-card ul {
-      list-style: none;
-      padding: 0;
-    }
+    .extra-card ul { list-style: none; padding: 0; }
 
     .extra-card li {
       position: relative;
@@ -648,9 +549,7 @@
     }
 
     /* ========== CONTACT / FOOTER ========== */
-    #contact {
-      border-top: 1px solid var(--border-color);
-    }
+    #contact { border-top: 1px solid var(--border-color); }
 
     .contact-content {
       text-align: center;
@@ -687,10 +586,7 @@
       transition: all 0.2s;
     }
 
-    .contact-link:hover {
-      border-color: var(--accent);
-      color: var(--accent);
-    }
+    .contact-link:hover { border-color: var(--accent); color: var(--accent); }
 
     footer {
       text-align: center;
@@ -708,9 +604,19 @@
       transition: opacity 0.6s ease, transform 0.6s ease;
     }
 
-    .fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+    /* ========== HOBBIES ========== */
+    .hobbies { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.75rem; }
+
+    .hobby-tag {
+      padding: 0.3rem 0.7rem;
+      background: rgba(188, 140, 255, 0.1);
+      border: 1px solid rgba(188, 140, 255, 0.3);
+      border-radius: 6px;
+      font-size: 0.8rem;
+      color: var(--accent-purple);
+      font-family: var(--font-mono);
     }
 
     /* ========== RESPONSIVE ========== */
@@ -728,84 +634,14 @@
         gap: 1rem;
       }
 
-      .nav-links.open {
-        display: flex;
-      }
-
-      .nav-hamburger {
-        display: block;
-      }
-
-      .hero-intro h1 {
-        font-size: 1.75rem;
-      }
-
-      .terminal-body {
-        font-size: 0.75rem;
-        padding: 1rem;
-      }
-
-      .profile-content {
-        grid-template-columns: 1fr;
-      }
-
-      .education-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .skills-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .extra-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    /* ========== LANGUAGES BAR ========== */
-    .languages {
-      display: flex;
-      gap: 1.5rem;
-      margin-top: 1rem;
-    }
-
-    .lang-item {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-size: 0.85rem;
-    }
-
-    .lang-bar {
-      width: 60px;
-      height: 6px;
-      background: var(--bg-tertiary);
-      border-radius: 3px;
-      overflow: hidden;
-    }
-
-    .lang-fill {
-      height: 100%;
-      border-radius: 3px;
-      background: var(--accent-green);
-    }
-
-    /* ========== HOBBIES ========== */
-    .hobbies {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-top: 0.75rem;
-    }
-
-    .hobby-tag {
-      padding: 0.3rem 0.7rem;
-      background: rgba(188, 140, 255, 0.1);
-      border: 1px solid rgba(188, 140, 255, 0.3);
-      border-radius: 6px;
-      font-size: 0.8rem;
-      color: var(--accent-purple);
-      font-family: var(--font-mono);
+      .nav-links.open { display: flex; }
+      .nav-hamburger { display: block; }
+      .hero-intro h1 { font-size: 1.75rem; }
+      .terminal-body { font-size: 0.75rem; padding: 1rem; }
+      .profile-content { grid-template-columns: 1fr; }
+      .education-grid { grid-template-columns: 1fr; }
+      .skills-grid { grid-template-columns: 1fr; }
+      .extra-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -817,12 +653,18 @@
       <div class="nav-logo">josue@dev:~$<span class="cursor">_</span></div>
       <button class="nav-hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Toggle menu">&#9776;</button>
       <ul class="nav-links">
-        <li><a href="#profile" onclick="this.closest('.nav-links').classList.remove('open')">Profile</a></li>
-        <li><a href="#skills" onclick="this.closest('.nav-links').classList.remove('open')">Skills</a></li>
-        <li><a href="#experience" onclick="this.closest('.nav-links').classList.remove('open')">Experience</a></li>
-        <li><a href="#education" onclick="this.closest('.nav-links').classList.remove('open')">Education</a></li>
+        <li><a href="#profile" onclick="this.closest('.nav-links').classList.remove('open')" data-i18n="nav.profile">Profile</a></li>
+        <li><a href="#skills" onclick="this.closest('.nav-links').classList.remove('open')" data-i18n="nav.skills">Skills</a></li>
+        <li><a href="#experience" onclick="this.closest('.nav-links').classList.remove('open')" data-i18n="nav.experience">Experience</a></li>
+        <li><a href="#education" onclick="this.closest('.nav-links').classList.remove('open')" data-i18n="nav.education">Education</a></li>
         <li><a href="#extra" onclick="this.closest('.nav-links').classList.remove('open')">Extra</a></li>
-        <li><a href="#contact" onclick="this.closest('.nav-links').classList.remove('open')">Contact</a></li>
+        <li><a href="#contact" onclick="this.closest('.nav-links').classList.remove('open')" data-i18n="nav.contact">Contact</a></li>
+        <li>
+          <div class="lang-switch">
+            <button class="lang-btn active" onclick="setLang('en')" id="lang-en">EN</button>
+            <button class="lang-btn" onclick="setLang('es')" id="lang-es">ES</button>
+          </div>
+        </li>
       </ul>
     </div>
   </nav>
@@ -849,11 +691,11 @@
       </div>
 
       <div class="hero-intro">
-        <h1>Hi, I'm <span class="accent">Josue Mente</span></h1>
-        <p class="subtitle">Tech Lead building scalable web solutions with 10+ years of hands-on experience across the full stack.</p>
+        <h1 data-i18n="hero.title">Hi, I'm <span class="accent">Josue Mente</span></h1>
+        <p class="subtitle" data-i18n="hero.subtitle">Tech Lead building scalable web solutions with 10+ years of hands-on experience across the full stack.</p>
         <div class="hero-cta">
-          <a href="#contact" class="btn btn-primary">Get in Touch</a>
-          <a href="#experience" class="btn btn-outline">View Experience</a>
+          <a href="#contact" class="btn btn-primary" data-i18n="hero.cta1">Get in Touch</a>
+          <a href="#experience" class="btn btn-outline" data-i18n="hero.cta2">View Experience</a>
         </div>
       </div>
     </div>
@@ -864,14 +706,14 @@
     <div class="section-inner">
       <div class="section-header">
         <span class="section-number">01.</span>
-        <h2>Profile</h2>
+        <h2 data-i18n="profile.title">Profile</h2>
         <span class="line"></span>
       </div>
       <div class="profile-content fade-in">
         <div class="profile-text">
-          <p>With over 10 years of experience as a Senior Web Developer, I've built a career around mastering a wide range of technologies and platforms, including Vue.js, React.js, AWS, Azure, PHP, Ruby on Rails, and Firebase.</p>
-          <p>I'm passionate about what I do and committed to delivering efficient, scalable solutions for each project. I also enjoy advising companies on their software development initiatives, helping them align technical decisions with business goals.</p>
-          <p>Learning new tools, methodologies, and techniques is key to my approach -- staying up-to-date lets me bring the latest innovations to both my personal projects and client work, ensuring high-impact results every time.</p>
+          <p data-i18n="profile.p1">With over 10 years of experience as a Senior Web Developer, I've built a career around mastering a wide range of technologies and platforms, including Vue.js, React.js, AWS, Azure, PHP, Ruby on Rails, and Firebase.</p>
+          <p data-i18n="profile.p2">I'm passionate about what I do and committed to delivering efficient, scalable solutions for each project. I also enjoy advising companies on their software development initiatives, helping them align technical decisions with business goals.</p>
+          <p data-i18n="profile.p3">Learning new tools, methodologies, and techniques is key to my approach -- staying up-to-date lets me bring the latest innovations to both my personal projects and client work, ensuring high-impact results every time.</p>
         </div>
         <div class="profile-details">
           <h3>// details</h3>
@@ -885,28 +727,28 @@
           </div>
           <div class="detail-row">
             <span class="detail-key">email</span>
-            <span class="detail-value"><a href="mailto:osueamenteb@gmail.com">osueamenteb@gmail.com</a></span>
+            <span class="detail-value"><a href="mailto:josuemente@hotmail.com">josuemente@hotmail.com</a></span>
           </div>
           <div class="detail-row">
             <span class="detail-key">github</span>
-            <span class="detail-value"><a href="https://github.com/mente-dev" target="_blank" rel="noopener">GitHub</a></span>
+            <span class="detail-value"><a href="https://github.com/mrmind3312" target="_blank" rel="noopener">GitHub</a></span>
           </div>
           <div class="detail-row">
             <span class="detail-key">linkedin</span>
             <span class="detail-value"><a href="https://linkedin.com/in/josue-mente" target="_blank" rel="noopener">LinkedIn</a></span>
           </div>
           <div class="detail-row">
-            <span class="detail-key">languages</span>
-            <span class="detail-value">Spanish, English</span>
+            <span class="detail-key" data-i18n="profile.languages">languages</span>
+            <span class="detail-value" data-i18n="profile.languagesVal">Spanish, English</span>
           </div>
 
           <div style="margin-top: 1rem;">
             <span class="detail-key">// hobbies</span>
             <div class="hobbies">
-              <span class="hobby-tag">Videogames</span>
-              <span class="hobby-tag">Computer Science</span>
-              <span class="hobby-tag">AI Content Generation</span>
-              <span class="hobby-tag">3D Print</span>
+              <span class="hobby-tag" data-i18n="hobby.videogames">Videogames</span>
+              <span class="hobby-tag" data-i18n="hobby.cs">Computer Science</span>
+              <span class="hobby-tag" data-i18n="hobby.ai">AI Content Generation</span>
+              <span class="hobby-tag" data-i18n="hobby.print">3D Print</span>
             </div>
           </div>
         </div>
@@ -919,7 +761,7 @@
     <div class="section-inner">
       <div class="section-header">
         <span class="section-number">02.</span>
-        <h2>Skills</h2>
+        <h2 data-i18n="skills.title">Skills</h2>
         <span class="line"></span>
       </div>
       <div class="skills-grid">
@@ -962,7 +804,7 @@
             <span class="skill-tag"><span class="dot dot-red"></span>Git</span>
             <span class="skill-tag"><span class="dot dot-blue"></span>AWS</span>
             <span class="skill-tag"><span class="dot dot-blue"></span>Azure</span>
-            <span class="skill-tag"><span class="dot dot-green"></span>Project Management</span>
+            <span class="skill-tag"><span class="dot dot-green" data-i18n="skills.pm">Project Management</span>
           </div>
         </div>
       </div>
@@ -974,7 +816,7 @@
     <div class="section-inner">
       <div class="section-header">
         <span class="section-number">03.</span>
-        <h2>Employment History</h2>
+        <h2 data-i18n="exp.title">Employment History</h2>
         <span class="line"></span>
       </div>
       <div class="timeline">
@@ -984,15 +826,15 @@
           <div class="timeline-header">
             <h3>Team Lead <span class="company">@ LOMAX Technologies S.A.</span></h3>
             <div class="meta">
-              <span>May 2018 -- Present</span>
+              <span data-i18n="exp.lomax.dates">May 2018 -- Present</span>
               <span>Guatemala City</span>
             </div>
           </div>
           <div class="timeline-body">
             <ul>
-              <li>Provided leadership, guidance, and mentorship to a team of Ruby software engineers, resulting in a <span class="highlight">150% increase in productivity</span></li>
-              <li>Facilitated collaboration between cross-functional teams to ensure successful completion of project milestones</li>
-              <li>Held regular meetings to ensure alignment with workflow and to ensure team members were on track to meet deadlines</li>
+              <li data-i18n="exp.lomax.1">Provided leadership, guidance, and mentorship to a team of Ruby software engineers, resulting in a <span class="highlight">150% increase in productivity</span></li>
+              <li data-i18n="exp.lomax.2">Facilitated collaboration between cross-functional teams to ensure successful completion of project milestones</li>
+              <li data-i18n="exp.lomax.3">Held regular meetings to ensure alignment with workflow and to ensure team members were on track to meet deadlines</li>
             </ul>
           </div>
         </div>
@@ -1002,17 +844,17 @@
           <div class="timeline-header">
             <h3>Software Engineer <span class="company">@ Learn.xyz</span></h3>
             <div class="meta">
-              <span>Apr 2024 -- Nov 2024</span>
+              <span data-i18n="exp.learn.dates">Apr 2024 -- Nov 2024</span>
               <span>Guatemala City</span>
             </div>
           </div>
           <div class="timeline-body">
             <ul>
-              <li>Developed and maintained the main product composed of mobile application, BaaS, and Web application</li>
-              <li>Reduced loading times for the mobile application by <span class="highlight">60%</span></li>
-              <li>Implemented features like files manager, users management, and invitations system</li>
-              <li>Refactored and improved around <span class="highlight">30% of the codebase</span></li>
-              <li>Implemented logging and tracking systems with PostHog and Sentry</li>
+              <li data-i18n="exp.learn.1">Developed and maintained the main product composed of mobile application, BaaS, and Web application</li>
+              <li data-i18n="exp.learn.2">Reduced loading times for the mobile application by <span class="highlight">60%</span></li>
+              <li data-i18n="exp.learn.3">Implemented features like files manager, users management, and invitations system</li>
+              <li data-i18n="exp.learn.4">Refactored and improved around <span class="highlight">30% of the codebase</span></li>
+              <li data-i18n="exp.learn.5">Implemented logging and tracking systems with PostHog and Sentry</li>
             </ul>
           </div>
         </div>
@@ -1022,17 +864,17 @@
           <div class="timeline-header">
             <h3>Senior Web Developer <span class="company">@ hyrd GmbH</span></h3>
             <div class="meta">
-              <span>Aug 2019 -- Oct 2023</span>
+              <span data-i18n="exp.hyrd.dates">Aug 2019 -- Oct 2023</span>
               <span>Frankfurt am Main</span>
             </div>
           </div>
           <div class="timeline-body">
             <ul>
-              <li>Collaborated with cross-functional teams to identify customer requirements and develop technical solutions</li>
-              <li>Developed an MVP used to validate customer feedback and identify product enhancements</li>
-              <li>Built an API enabling seamless integration with third-party services and increased system scalability</li>
-              <li>Developed a Ruby on Rails web application that increased customer engagement by <span class="highlight">200%</span></li>
-              <li>Optimized website features to ensure compatibility with multiple browsers and devices</li>
+              <li data-i18n="exp.hyrd.1">Collaborated with cross-functional teams to identify customer requirements and develop technical solutions</li>
+              <li data-i18n="exp.hyrd.2">Developed an MVP used to validate customer feedback and identify product enhancements</li>
+              <li data-i18n="exp.hyrd.3">Built an API enabling seamless integration with third-party services and increased system scalability</li>
+              <li data-i18n="exp.hyrd.4">Developed a Ruby on Rails web application that increased customer engagement by <span class="highlight">200%</span></li>
+              <li data-i18n="exp.hyrd.5">Optimized website features to ensure compatibility with multiple browsers and devices</li>
             </ul>
           </div>
         </div>
@@ -1042,17 +884,17 @@
           <div class="timeline-header">
             <h3>Web Developer <span class="company">@ Publicidad Comercial MullenLowe</span></h3>
             <div class="meta">
-              <span>Dec 2015 -- Mar 2018</span>
+              <span data-i18n="exp.mullen.dates">Dec 2015 -- Mar 2018</span>
               <span>Guatemala City</span>
             </div>
           </div>
           <div class="timeline-body">
             <ul>
-              <li>Developed a responsive website for a major e-commerce company that increased user engagement by <span class="highlight">120%</span></li>
-              <li>Optimized web page loading times by <span class="highlight">90%</span>, improving user experience</li>
-              <li>Developed a CMS for a media company that reduced maintenance costs by <span class="highlight">75%</span></li>
-              <li>Built an API connecting the web application with third-party services for real-time data exchange</li>
-              <li>Implemented responsive design ensuring accessibility on all devices</li>
+              <li data-i18n="exp.mullen.1">Developed a responsive website for a major e-commerce company that increased user engagement by <span class="highlight">120%</span></li>
+              <li data-i18n="exp.mullen.2">Optimized web page loading times by <span class="highlight">90%</span>, improving user experience</li>
+              <li data-i18n="exp.mullen.3">Developed a CMS for a media company that reduced maintenance costs by <span class="highlight">75%</span></li>
+              <li data-i18n="exp.mullen.4">Built an API connecting the web application with third-party services for real-time data exchange</li>
+              <li data-i18n="exp.mullen.5">Implemented responsive design ensuring accessibility on all devices</li>
             </ul>
           </div>
         </div>
@@ -1062,16 +904,16 @@
           <div class="timeline-header">
             <h3>Software Developer <span class="company">@ KRONOS S.A.</span></h3>
             <div class="meta">
-              <span>Feb 2014 -- Nov 2015</span>
+              <span data-i18n="exp.kronos.dates">Feb 2014 -- Nov 2015</span>
               <span>Guatemala City</span>
             </div>
           </div>
           <div class="timeline-body">
             <ul>
-              <li>Developed a RESTful API handling over <span class="highlight">1M+ requests/day</span> with response times under 170ms</li>
-              <li>Optimized database queries to reduce response times by <span class="highlight">97%</span></li>
-              <li>Implemented automated monitoring and alerting to quickly identify and resolve system issues</li>
-              <li>Created a custom logging system for debugging and analytics</li>
+              <li data-i18n="exp.kronos.1">Developed a RESTful API handling over <span class="highlight">1M+ requests/day</span> with response times under 170ms</li>
+              <li data-i18n="exp.kronos.2">Optimized database queries to reduce response times by <span class="highlight">97%</span></li>
+              <li data-i18n="exp.kronos.3">Implemented automated monitoring and alerting to quickly identify and resolve system issues</li>
+              <li data-i18n="exp.kronos.4">Created a custom logging system for debugging and analytics</li>
             </ul>
           </div>
         </div>
@@ -1079,17 +921,17 @@
         <!-- FRISCO -->
         <div class="timeline-item fade-in">
           <div class="timeline-header">
-            <h3>Technical Documentation Writer <span class="company">@ FRISCO S.A.</span></h3>
+            <h3 data-i18n="exp.frisco.role">Technical Documentation Writer <span class="company">@ FRISCO S.A.</span></h3>
             <div class="meta">
-              <span>Sep 2013 -- Feb 2014</span>
+              <span data-i18n="exp.frisco.dates">Sep 2013 -- Feb 2014</span>
               <span>Guatemala City</span>
             </div>
           </div>
           <div class="timeline-body">
             <ul>
-              <li>Created and maintained product documentation, including user manuals, help guides, and FAQs</li>
-              <li>Wrote documentation describing the technical architecture of applications</li>
-              <li>Developed a custom library that increased developer productivity and code reuse</li>
+              <li data-i18n="exp.frisco.1">Created and maintained product documentation, including user manuals, help guides, and FAQs</li>
+              <li data-i18n="exp.frisco.2">Wrote documentation describing the technical architecture of applications</li>
+              <li data-i18n="exp.frisco.3">Developed a custom library that increased developer productivity and code reuse</li>
             </ul>
           </div>
         </div>
@@ -1103,20 +945,20 @@
     <div class="section-inner">
       <div class="section-header">
         <span class="section-number">04.</span>
-        <h2>Education</h2>
+        <h2 data-i18n="edu.title">Education</h2>
         <span class="line"></span>
       </div>
       <div class="education-grid">
         <div class="education-card fade-in">
-          <h3>Computer Science Bachelor</h3>
+          <h3 data-i18n="edu.kinal.degree">Computer Science Bachelor</h3>
           <div class="institution">KINAL, Guatemala City</div>
-          <div class="dates">Feb 2011 -- Nov 2013</div>
+          <div class="dates" data-i18n="edu.kinal.dates">Feb 2011 -- Nov 2013</div>
         </div>
         <div class="education-card fade-in">
-          <h3>Software Engineering</h3>
+          <h3 data-i18n="edu.umg.degree">Software Engineering</h3>
           <div class="institution">Universidad Mariano Galvez de Guatemala</div>
-          <div class="dates">Feb 2014 -- Jun 2016</div>
-          <p>Chose to focus on gaining hands-on industry experience and expanding knowledge through relevant courses, developing practical skills applied in real-world situations.</p>
+          <div class="dates" data-i18n="edu.umg.dates">Feb 2014 -- Jun 2016</div>
+          <p data-i18n="edu.umg.desc">Chose to focus on gaining hands-on industry experience and expanding knowledge through relevant courses, developing practical skills applied in real-world situations.</p>
         </div>
       </div>
     </div>
@@ -1127,20 +969,20 @@
     <div class="section-inner">
       <div class="section-header">
         <span class="section-number">05.</span>
-        <h2>Extra-Curricular</h2>
+        <h2 data-i18n="extra.title">Extra-Curricular</h2>
         <span class="line"></span>
       </div>
       <div class="extra-grid">
 
         <div class="extra-card fade-in">
-          <h3>Show Developer</h3>
+          <h3>Senior Software Developer</h3>
           <div class="company">CODE Crypto Marketing S.A.</div>
           <div class="dates">Nov 2021 -- Dec 2022</div>
-          <p>Developed and maintained Xmas light shows for the brand "Gallo" by Cerveceria Centro Americana S.A.</p>
+          <p data-i18n="extra.code.desc">Developed and maintained Xmas light shows for the brand "Gallo" by Cerveceria Centro Americana S.A.</p>
           <ul>
-            <li>Built shows for the main Xmas tree and smaller trees across the capital city</li>
-            <li>Refactored and reused previous routines for new songs and configurations</li>
-            <li>Completed all shows successfully across two seasons</li>
+            <li data-i18n="extra.code.1">Built shows for the main Xmas tree and smaller trees across the capital city</li>
+            <li data-i18n="extra.code.2">Refactored and reused previous routines for new songs and configurations</li>
+            <li data-i18n="extra.code.3">Completed all shows successfully across two seasons</li>
           </ul>
         </div>
 
@@ -1148,11 +990,24 @@
           <h3>Senior Web Developer</h3>
           <div class="company">The Audience Media S.A.</div>
           <div class="dates">Oct 2023 -- Mar 2024</div>
-          <p>Refactored and redesigned quiz platform for PASMO focused on statistics data across four countries.</p>
+          <p data-i18n="extra.audience.desc">Refactored and redesigned quiz platform for PASMO focused on statistics data across four countries.</p>
           <ul>
-            <li>Rebuilt the questions set and answers schema</li>
-            <li>Reskinned the platform following new design specifications</li>
-            <li>Generated reports by country and summary of quizzes</li>
+            <li data-i18n="extra.audience.1">Rebuilt the questions set and answers schema</li>
+            <li data-i18n="extra.audience.2">Reskinned the platform following new design specifications</li>
+            <li data-i18n="extra.audience.3">Generated reports by country and summary of quizzes</li>
+          </ul>
+        </div>
+
+        <div class="extra-card fade-in">
+          <h3 data-i18n="extra.consul.role">Software Consultant &amp; Problem Solver</h3>
+          <div class="company" data-i18n="extra.consul.company">Freelance / Multiple Clients</div>
+          <div class="dates" data-i18n="extra.consul.dates">Ongoing</div>
+          <p data-i18n="extra.consul.desc">Consultant and problem solver for key factors of productive client and internal applications, identifying critical bottlenecks and delivering targeted solutions.</p>
+          <ul>
+            <li data-i18n="extra.consul.1">Diagnosed and resolved critical performance issues in production applications for multiple clients</li>
+            <li data-i18n="extra.consul.2">Advised on architecture decisions and technology stack selection aligned with business goals</li>
+            <li data-i18n="extra.consul.3">Identified and fixed key bottlenecks in internal workflows and deployment pipelines</li>
+            <li data-i18n="extra.consul.4">Provided strategic guidance on scalability, security, and maintainability of existing systems</li>
           </ul>
         </div>
 
@@ -1165,15 +1020,15 @@
     <div class="section-inner">
       <div class="section-header">
         <span class="section-number">06.</span>
-        <h2>Get in Touch</h2>
+        <h2 data-i18n="contact.title">Get in Touch</h2>
         <span class="line"></span>
       </div>
       <div class="contact-content fade-in">
-        <p>I'm always open to discussing new projects, opportunities, or ways to contribute to your team. Feel free to reach out.</p>
+        <p data-i18n="contact.desc">I'm always open to discussing new projects, opportunities, or ways to contribute to your team. Feel free to reach out.</p>
         <div class="contact-links">
-          <a href="mailto:osueamenteb@gmail.com" class="contact-link">osueamenteb@gmail.com</a>
+          <a href="mailto:josuemente@hotmail.com" class="contact-link">josuemente@hotmail.com</a>
           <a href="tel:+50232281546" class="contact-link">+502 32281546</a>
-          <a href="https://github.com/mente-dev" target="_blank" rel="noopener" class="contact-link">GitHub</a>
+          <a href="https://github.com/mrmind3312" target="_blank" rel="noopener" class="contact-link">GitHub</a>
           <a href="https://linkedin.com/in/josue-mente" target="_blank" rel="noopener" class="contact-link">LinkedIn</a>
         </div>
       </div>
@@ -1185,6 +1040,196 @@
   </footer>
 
   <script>
+    // i18n translations
+    const translations = {
+      en: {
+        "nav.profile": "Profile",
+        "nav.skills": "Skills",
+        "nav.experience": "Experience",
+        "nav.education": "Education",
+        "nav.contact": "Contact",
+        "hero.title": 'Hi, I\'m <span class="accent">Josue Mente</span>',
+        "hero.subtitle": "Tech Lead building scalable web solutions with 10+ years of hands-on experience across the full stack.",
+        "hero.cta1": "Get in Touch",
+        "hero.cta2": "View Experience",
+        "profile.title": "Profile",
+        "profile.p1": "With over 10 years of experience as a Senior Web Developer, I've built a career around mastering a wide range of technologies and platforms, including Vue.js, React.js, AWS, Azure, PHP, Ruby on Rails, and Firebase.",
+        "profile.p2": "I'm passionate about what I do and committed to delivering efficient, scalable solutions for each project. I also enjoy advising companies on their software development initiatives, helping them align technical decisions with business goals.",
+        "profile.p3": "Learning new tools, methodologies, and techniques is key to my approach -- staying up-to-date lets me bring the latest innovations to both my personal projects and client work, ensuring high-impact results every time.",
+        "profile.languages": "languages",
+        "profile.languagesVal": "Spanish, English",
+        "hobby.videogames": "Videogames",
+        "hobby.cs": "Computer Science",
+        "hobby.ai": "AI Content Generation",
+        "hobby.print": "3D Print",
+        "skills.title": "Skills",
+        "skills.pm": "Project Management",
+        "exp.title": "Employment History",
+        "exp.lomax.dates": "May 2018 -- Present",
+        "exp.lomax.1": 'Provided leadership, guidance, and mentorship to a team of Ruby software engineers, resulting in a <span class="highlight">150% increase in productivity</span>',
+        "exp.lomax.2": "Facilitated collaboration between cross-functional teams to ensure successful completion of project milestones",
+        "exp.lomax.3": "Held regular meetings to ensure alignment with workflow and to ensure team members were on track to meet deadlines",
+        "exp.learn.dates": "Apr 2024 -- Nov 2024",
+        "exp.learn.1": "Developed and maintained the main product composed of mobile application, BaaS, and Web application",
+        "exp.learn.2": 'Reduced loading times for the mobile application by <span class="highlight">60%</span>',
+        "exp.learn.3": "Implemented features like files manager, users management, and invitations system",
+        "exp.learn.4": 'Refactored and improved around <span class="highlight">30% of the codebase</span>',
+        "exp.learn.5": "Implemented logging and tracking systems with PostHog and Sentry",
+        "exp.hyrd.dates": "Aug 2019 -- Oct 2023",
+        "exp.hyrd.1": "Collaborated with cross-functional teams to identify customer requirements and develop technical solutions",
+        "exp.hyrd.2": "Developed an MVP used to validate customer feedback and identify product enhancements",
+        "exp.hyrd.3": "Built an API enabling seamless integration with third-party services and increased system scalability",
+        "exp.hyrd.4": 'Developed a Ruby on Rails web application that increased customer engagement by <span class="highlight">200%</span>',
+        "exp.hyrd.5": "Optimized website features to ensure compatibility with multiple browsers and devices",
+        "exp.mullen.dates": "Dec 2015 -- Mar 2018",
+        "exp.mullen.1": 'Developed a responsive website for a major e-commerce company that increased user engagement by <span class="highlight">120%</span>',
+        "exp.mullen.2": 'Optimized web page loading times by <span class="highlight">90%</span>, improving user experience',
+        "exp.mullen.3": 'Developed a CMS for a media company that reduced maintenance costs by <span class="highlight">75%</span>',
+        "exp.mullen.4": "Built an API connecting the web application with third-party services for real-time data exchange",
+        "exp.mullen.5": "Implemented responsive design ensuring accessibility on all devices",
+        "exp.kronos.dates": "Feb 2014 -- Nov 2015",
+        "exp.kronos.1": 'Developed a RESTful API handling over <span class="highlight">1M+ requests/day</span> with response times under 170ms',
+        "exp.kronos.2": 'Optimized database queries to reduce response times by <span class="highlight">97%</span>',
+        "exp.kronos.3": "Implemented automated monitoring and alerting to quickly identify and resolve system issues",
+        "exp.kronos.4": "Created a custom logging system for debugging and analytics",
+        "exp.frisco.role": 'Technical Documentation Writer <span class="company">@ FRISCO S.A.</span>',
+        "exp.frisco.dates": "Sep 2013 -- Feb 2014",
+        "exp.frisco.1": "Created and maintained product documentation, including user manuals, help guides, and FAQs",
+        "exp.frisco.2": "Wrote documentation describing the technical architecture of applications",
+        "exp.frisco.3": "Developed a custom library that increased developer productivity and code reuse",
+        "edu.title": "Education",
+        "edu.kinal.degree": "Computer Science Bachelor",
+        "edu.kinal.dates": "Feb 2011 -- Nov 2013",
+        "edu.umg.degree": "Software Engineering",
+        "edu.umg.dates": "Feb 2014 -- Jun 2016",
+        "edu.umg.desc": "Chose to focus on gaining hands-on industry experience and expanding knowledge through relevant courses, developing practical skills applied in real-world situations.",
+        "extra.title": "Extra-Curricular",
+        "extra.code.desc": 'Developed and maintained Xmas light shows for the brand "Gallo" by Cerveceria Centro Americana S.A.',
+        "extra.code.1": "Built shows for the main Xmas tree and smaller trees across the capital city",
+        "extra.code.2": "Refactored and reused previous routines for new songs and configurations",
+        "extra.code.3": "Completed all shows successfully across two seasons",
+        "extra.audience.desc": "Refactored and redesigned quiz platform for PASMO focused on statistics data across four countries.",
+        "extra.audience.1": "Rebuilt the questions set and answers schema",
+        "extra.audience.2": "Reskinned the platform following new design specifications",
+        "extra.audience.3": "Generated reports by country and summary of quizzes",
+        "extra.consul.role": "Software Consultant &amp; Problem Solver",
+        "extra.consul.company": "Freelance / Multiple Clients",
+        "extra.consul.dates": "Ongoing",
+        "extra.consul.desc": "Consultant and problem solver for key factors of productive client and internal applications, identifying critical bottlenecks and delivering targeted solutions.",
+        "extra.consul.1": "Diagnosed and resolved critical performance issues in production applications for multiple clients",
+        "extra.consul.2": "Advised on architecture decisions and technology stack selection aligned with business goals",
+        "extra.consul.3": "Identified and fixed key bottlenecks in internal workflows and deployment pipelines",
+        "extra.consul.4": "Provided strategic guidance on scalability, security, and maintainability of existing systems",
+        "contact.title": "Get in Touch",
+        "contact.desc": "I'm always open to discussing new projects, opportunities, or ways to contribute to your team. Feel free to reach out."
+      },
+      es: {
+        "nav.profile": "Perfil",
+        "nav.skills": "Habilidades",
+        "nav.experience": "Experiencia",
+        "nav.education": "Educacion",
+        "nav.contact": "Contacto",
+        "hero.title": 'Hola, soy <span class="accent">Josue Mente</span>',
+        "hero.subtitle": "Tech Lead construyendo soluciones web escalables con mas de 10 anos de experiencia practica en todo el stack.",
+        "hero.cta1": "Contactame",
+        "hero.cta2": "Ver Experiencia",
+        "profile.title": "Perfil",
+        "profile.p1": "Con mas de 10 anos de experiencia como Desarrollador Web Senior, he construido mi carrera dominando una amplia gama de tecnologias y plataformas, incluyendo Vue.js, React.js, AWS, Azure, PHP, Ruby on Rails y Firebase.",
+        "profile.p2": "Me apasiona lo que hago y estoy comprometido con entregar soluciones eficientes y escalables para cada proyecto. Tambien disfruto asesorar a empresas en sus iniciativas de desarrollo de software, ayudandoles a alinear decisiones tecnicas con objetivos de negocio.",
+        "profile.p3": "Aprender nuevas herramientas, metodologias y tecnicas es clave en mi enfoque -- mantenerme actualizado me permite llevar las ultimas innovaciones tanto a mis proyectos personales como al trabajo con clientes, asegurando resultados de alto impacto.",
+        "profile.languages": "idiomas",
+        "profile.languagesVal": "Espanol, Ingles",
+        "hobby.videogames": "Videojuegos",
+        "hobby.cs": "Ciencias de la Computacion",
+        "hobby.ai": "Generacion de Contenido con IA",
+        "hobby.print": "Impresion 3D",
+        "skills.title": "Habilidades",
+        "skills.pm": "Gestion de Proyectos",
+        "exp.title": "Historial Laboral",
+        "exp.lomax.dates": "May 2018 -- Presente",
+        "exp.lomax.1": 'Liderazgo, orientacion y mentoria a un equipo de ingenieros de software Ruby, logrando un <span class="highlight">aumento del 150% en productividad</span>',
+        "exp.lomax.2": "Facilitacion de la colaboracion entre equipos multifuncionales para asegurar la finalizacion exitosa de hitos del proyecto",
+        "exp.lomax.3": "Reuniones regulares para asegurar alineacion con el flujo de trabajo y que el equipo cumpliera con los plazos",
+        "exp.learn.dates": "Abr 2024 -- Nov 2024",
+        "exp.learn.1": "Desarrollo y mantenimiento del producto principal compuesto por aplicacion movil, BaaS y aplicacion web",
+        "exp.learn.2": 'Reduccion de tiempos de carga de la aplicacion movil en un <span class="highlight">60%</span>',
+        "exp.learn.3": "Implementacion de funcionalidades como gestor de archivos, gestion de usuarios y sistema de invitaciones",
+        "exp.learn.4": 'Refactorizacion y mejora de aproximadamente el <span class="highlight">30% del codigo base</span>',
+        "exp.learn.5": "Implementacion de sistemas de logging y tracking con PostHog y Sentry",
+        "exp.hyrd.dates": "Ago 2019 -- Oct 2023",
+        "exp.hyrd.1": "Colaboracion con equipos multifuncionales para identificar requerimientos del cliente y desarrollar soluciones tecnicas",
+        "exp.hyrd.2": "Desarrollo de un MVP para validar retroalimentacion del cliente e identificar mejoras del producto",
+        "exp.hyrd.3": "Construccion de una API que permitio integracion fluida con servicios de terceros y mayor escalabilidad",
+        "exp.hyrd.4": 'Desarrollo de una aplicacion web en Ruby on Rails que incremento la participacion del cliente en un <span class="highlight">200%</span>',
+        "exp.hyrd.5": "Optimizacion de funcionalidades web para asegurar compatibilidad con multiples navegadores y dispositivos",
+        "exp.mullen.dates": "Dic 2015 -- Mar 2018",
+        "exp.mullen.1": 'Desarrollo de un sitio web responsive para una empresa de e-commerce que incremento la participacion del usuario en un <span class="highlight">120%</span>',
+        "exp.mullen.2": 'Optimizacion de tiempos de carga de paginas web en un <span class="highlight">90%</span>, mejorando la experiencia del usuario',
+        "exp.mullen.3": 'Desarrollo de un CMS para una empresa de medios que redujo costos de mantenimiento en un <span class="highlight">75%</span>',
+        "exp.mullen.4": "Construccion de una API conectando la aplicacion web con servicios de terceros para intercambio de datos en tiempo real",
+        "exp.mullen.5": "Implementacion de diseno responsive asegurando accesibilidad en todos los dispositivos",
+        "exp.kronos.dates": "Feb 2014 -- Nov 2015",
+        "exp.kronos.1": 'Desarrollo de una API RESTful manejando mas de <span class="highlight">1M+ solicitudes/dia</span> con tiempos de respuesta menores a 170ms',
+        "exp.kronos.2": 'Optimizacion de consultas de base de datos para reducir tiempos de respuesta en un <span class="highlight">97%</span>',
+        "exp.kronos.3": "Implementacion de monitoreo automatizado y alertas para identificar y resolver problemas del sistema rapidamente",
+        "exp.kronos.4": "Creacion de un sistema de logging personalizado para depuracion y analitica",
+        "exp.frisco.role": 'Redactor de Documentacion Tecnica <span class="company">@ FRISCO S.A.</span>',
+        "exp.frisco.dates": "Sep 2013 -- Feb 2014",
+        "exp.frisco.1": "Creacion y mantenimiento de documentacion de productos, incluyendo manuales de usuario, guias de ayuda y FAQs",
+        "exp.frisco.2": "Redaccion de documentacion describiendo la arquitectura tecnica de las aplicaciones",
+        "exp.frisco.3": "Desarrollo de una libreria personalizada que incremento la productividad del desarrollador y reutilizacion de codigo",
+        "edu.title": "Educacion",
+        "edu.kinal.degree": "Bachillerato en Ciencias de la Computacion",
+        "edu.kinal.dates": "Feb 2011 -- Nov 2013",
+        "edu.umg.degree": "Ingenieria en Software",
+        "edu.umg.dates": "Feb 2014 -- Jun 2016",
+        "edu.umg.desc": "Decidi enfocarme en obtener experiencia practica en la industria y expandir mis conocimientos a traves de cursos relevantes, desarrollando habilidades practicas aplicadas en situaciones reales.",
+        "extra.title": "Actividades Extra-Curriculares",
+        "extra.code.desc": 'Desarrollo y mantenimiento de shows de luces navidenas para la marca "Gallo" de Cerveceria Centro Americana S.A.',
+        "extra.code.1": "Construccion de shows para el arbol navideno principal y arboles mas pequenos en toda la ciudad capital",
+        "extra.code.2": "Refactorizacion y reutilizacion de rutinas previas para nuevas canciones y configuraciones",
+        "extra.code.3": "Finalizacion exitosa de todos los shows durante dos temporadas",
+        "extra.audience.desc": "Refactorizacion y rediseno de plataforma de quizzes para PASMO enfocada en datos estadisticos de cuatro paises.",
+        "extra.audience.1": "Reconstruccion del esquema de preguntas y respuestas",
+        "extra.audience.2": "Rediseno visual de la plataforma siguiendo nuevas especificaciones de diseno",
+        "extra.audience.3": "Generacion de reportes por pais y resumen de quizzes realizados",
+        "extra.consul.role": "Consultor de Software &amp; Solucionador de Problemas",
+        "extra.consul.company": "Freelance / Multiples Clientes",
+        "extra.consul.dates": "Continuo",
+        "extra.consul.desc": "Consultor y solucionador de problemas para factores clave de aplicaciones productivas de clientes e internas, identificando cuellos de botella criticos y entregando soluciones dirigidas.",
+        "extra.consul.1": "Diagnostico y resolucion de problemas criticos de rendimiento en aplicaciones en produccion para multiples clientes",
+        "extra.consul.2": "Asesoria en decisiones de arquitectura y seleccion de stack tecnologico alineado con objetivos de negocio",
+        "extra.consul.3": "Identificacion y correccion de cuellos de botella clave en flujos de trabajo internos y pipelines de despliegue",
+        "extra.consul.4": "Orientacion estrategica sobre escalabilidad, seguridad y mantenibilidad de sistemas existentes",
+        "contact.title": "Contacto",
+        "contact.desc": "Siempre estoy abierto a discutir nuevos proyectos, oportunidades o formas de contribuir a tu equipo. No dudes en contactarme."
+      }
+    };
+
+    let currentLang = 'en';
+
+    function setLang(lang) {
+      currentLang = lang;
+      document.documentElement.lang = lang;
+      document.getElementById('lang-en').classList.toggle('active', lang === 'en');
+      document.getElementById('lang-es').classList.toggle('active', lang === 'es');
+
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[lang][key]) {
+          el.innerHTML = translations[lang][key];
+        }
+      });
+
+      localStorage.setItem('lang', lang);
+    }
+
+    // Restore saved language preference
+    const savedLang = localStorage.getItem('lang');
+    if (savedLang && savedLang !== 'en') {
+      setLang(savedLang);
+    }
+
     // Scroll animations
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
