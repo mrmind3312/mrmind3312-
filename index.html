@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Josue Mente | Tech Lead & Senior Web Developer</title>
-  <meta name="description" content="Tech Lead with 10+ years of experience building scalable web applications with React, Vue, Ruby on Rails, Node.js, and more.">
+  <title>Josue Mente | Software Architect & Cloud Architect</title>
+  <meta name="description" content="Software & Cloud Architect with 10+ years designing secure, compliant, and scalable systems on AWS and Azure for banking and financial services.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -213,7 +213,7 @@
     .value { color: var(--text-primary); }
     .comment { color: var(--text-muted); }
 
-    .hero-intro { margin-top: 2.5rem; max-width: 600px; }
+    .hero-intro { margin-top: 2.5rem; max-width: 680px; }
 
     .hero-intro h1 {
       font-size: 2.5rem;
@@ -228,6 +228,26 @@
       font-size: 1.15rem;
       color: var(--text-secondary);
       margin-bottom: 1.5rem;
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.35rem 0.75rem;
+      background: rgba(63, 185, 80, 0.1);
+      border: 1px solid rgba(63, 185, 80, 0.35);
+      border-radius: 6px;
+      font-size: 0.75rem;
+      color: var(--accent-green);
+      font-family: var(--font-mono);
     }
 
     .hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; }
@@ -650,7 +670,7 @@
   <!-- NAV -->
   <nav>
     <div class="nav-inner">
-      <div class="nav-logo">josue@dev:~$<span class="cursor">_</span></div>
+      <div class="nav-logo">josue@arch:~$<span class="cursor">_</span></div>
       <button class="nav-hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Toggle menu">&#9776;</button>
       <ul class="nav-links">
         <li><a href="#profile" onclick="this.closest('.nav-links').classList.remove('open')" data-i18n="nav.profile">Profile</a></li>
@@ -677,13 +697,14 @@
           <span class="terminal-dot red"></span>
           <span class="terminal-dot yellow"></span>
           <span class="terminal-dot green"></span>
-          <span class="terminal-title">josue@dev ~ /about</span>
+          <span class="terminal-title">josue@arch ~ /about</span>
         </div>
         <div class="terminal-body">
           <div class="terminal-line"><span class="prompt">$</span> cat profile.json</div>
           <div class="terminal-line">{</div>
           <div class="terminal-line">&nbsp;&nbsp;<span class="key">"name"</span>: <span class="string">"Josue Mente"</span>,</div>
-          <div class="terminal-line">&nbsp;&nbsp;<span class="key">"role"</span>: <span class="string">"Tech Lead &amp; Senior Web Developer"</span>,</div>
+          <div class="terminal-line">&nbsp;&nbsp;<span class="key">"role"</span>: <span class="string">"Software Architect &amp; Cloud Architect"</span>,</div>
+          <div class="terminal-line">&nbsp;&nbsp;<span class="key">"focus"</span>: <span class="string">"Banking, Fintech &amp; Regulated Industries"</span>,</div>
           <div class="terminal-line">&nbsp;&nbsp;<span class="key">"experience"</span>: <span class="string">"10+ years"</span>,</div>
           <div class="terminal-line">&nbsp;&nbsp;<span class="key">"location"</span>: <span class="string">"Guatemala"</span></div>
           <div class="terminal-line">}</div>
@@ -692,7 +713,14 @@
 
       <div class="hero-intro">
         <h1 data-i18n="hero.title">Hi, I'm <span class="accent">Josue Mente</span></h1>
-        <p class="subtitle" data-i18n="hero.subtitle">Tech Lead building scalable web solutions with 10+ years of hands-on experience across the full stack.</p>
+        <p class="subtitle" data-i18n="hero.subtitle">Software & Cloud Architect designing secure, compliant, and scalable systems for banking and financial services.</p>
+        <div class="hero-badges">
+          <span class="hero-badge">AWS</span>
+          <span class="hero-badge">Azure</span>
+          <span class="hero-badge">Kubernetes</span>
+          <span class="hero-badge">Terraform</span>
+          <span class="hero-badge">PCI DSS / SOX</span>
+        </div>
         <div class="hero-cta">
           <a href="#contact" class="btn btn-primary" data-i18n="hero.cta1">Get in Touch</a>
           <a href="#experience" class="btn btn-outline" data-i18n="hero.cta2">View Experience</a>
@@ -711,9 +739,9 @@
       </div>
       <div class="profile-content fade-in">
         <div class="profile-text">
-          <p data-i18n="profile.p1">With over 10 years of experience as a Senior Web Developer, I've built a career around mastering a wide range of technologies and platforms, including Vue.js, React.js, AWS, Azure, PHP, Ruby on Rails, and Firebase.</p>
-          <p data-i18n="profile.p2">I'm passionate about what I do and committed to delivering efficient, scalable solutions for each project. I also enjoy advising companies on their software development initiatives, helping them align technical decisions with business goals.</p>
-          <p data-i18n="profile.p3">Learning new tools, methodologies, and techniques is key to my approach -- staying up-to-date lets me bring the latest innovations to both my personal projects and client work, ensuring high-impact results every time.</p>
+          <p data-i18n="profile.p1">I am a Software Architect and Cloud Architect with 10+ years of experience designing, deploying, and operating mission-critical platforms on AWS and Azure. My work is strongly oriented toward regulated environments such as banking, fintech, and financial services.</p>
+          <p data-i18n="profile.p2">I help organizations build cloud-native architectures that meet strict security, traceability, and auditability standards. I have hands-on experience implementing compliance controls aligned with PCI DSS, SOX, ISO 27001, and banking regulatory frameworks, covering IAM, encryption, logging, monitoring, and audit trails.</p>
+          <p data-i18n="profile.p3">I specialize in infrastructure as code (Terraform), container orchestration (Kubernetes, EKS, AKS), CI/CD automation, observability stacks, and Zero Trust security models. I bridge deep technical execution with high-level architecture decisions to deliver reliable, cost-efficient, and regulatorily sound systems.</p>
         </div>
         <div class="profile-details">
           <h3>// details</h3>
@@ -743,12 +771,12 @@
           </div>
 
           <div style="margin-top: 1rem;">
-            <span class="detail-key">// hobbies</span>
+            <span class="detail-key">// focus areas</span>
             <div class="hobbies">
-              <span class="hobby-tag" data-i18n="hobby.videogames">Videogames</span>
-              <span class="hobby-tag" data-i18n="hobby.cs">Computer Science</span>
-              <span class="hobby-tag" data-i18n="hobby.ai">AI Content Generation</span>
-              <span class="hobby-tag" data-i18n="hobby.print">3D Print</span>
+              <span class="hobby-tag" data-i18n="hobby.cloud">Cloud Architecture</span>
+              <span class="hobby-tag" data-i18n="hobby.security">Security & Compliance</span>
+              <span class="hobby-tag" data-i18n="hobby.obs">Observability</span>
+              <span class="hobby-tag" data-i18n="hobby.iac">Infrastructure as Code</span>
             </div>
           </div>
         </div>
@@ -766,45 +794,76 @@
       </div>
       <div class="skills-grid">
         <div class="skill-category fade-in">
-          <h3>// frontend</h3>
+          <h3>// cloud platforms</h3>
           <div class="skill-tags">
-            <span class="skill-tag"><span class="dot dot-blue"></span>ReactJS</span>
-            <span class="skill-tag"><span class="dot dot-green"></span>VueJS</span>
-            <span class="skill-tag"><span class="dot dot-blue"></span>React Native</span>
-            <span class="skill-tag"><span class="dot dot-orange"></span>JavaScript</span>
-            <span class="skill-tag"><span class="dot dot-purple"></span>jQuery</span>
-            <span class="skill-tag"><span class="dot dot-blue"></span>CSS</span>
-            <span class="skill-tag"><span class="dot dot-cyan"></span>Tailwind CSS</span>
-            <span class="skill-tag"><span class="dot dot-purple"></span>Bootstrap</span>
+            <span class="skill-tag"><span class="dot dot-orange"></span>AWS</span>
+            <span class="skill-tag"><span class="dot dot-blue"></span>Azure</span>
+            <span class="skill-tag"><span class="dot dot-purple"></span>Azure DevOps</span>
+            <span class="skill-tag"><span class="dot dot-orange"></span>AWS Well-Architected</span>
+            <span class="skill-tag"><span class="dot dot-blue"></span>Multi-Cloud Strategy</span>
+            <span class="skill-tag"><span class="dot dot-cyan"></span>Cloud Cost Optimization</span>
           </div>
         </div>
         <div class="skill-category fade-in">
-          <h3>// backend</h3>
+          <h3>// infrastructure & containers</h3>
+          <div class="skill-tags">
+            <span class="skill-tag"><span class="dot dot-blue"></span>Kubernetes</span>
+            <span class="skill-tag"><span class="dot dot-blue"></span>EKS</span>
+            <span class="skill-tag"><span class="dot dot-blue"></span>AKS</span>
+            <span class="skill-tag"><span class="dot dot-cyan"></span>Docker</span>
+            <span class="skill-tag"><span class="dot dot-purple"></span>Terraform</span>
+            <span class="skill-tag"><span class="dot dot-orange"></span>CloudFormation</span>
+            <span class="skill-tag"><span class="dot dot-green"></span>Helm</span>
+            <span class="skill-tag"><span class="dot dot-red"></span>Linux</span>
+          </div>
+        </div>
+        <div class="skill-category fade-in">
+          <h3>// security & compliance</h3>
+          <div class="skill-tags">
+            <span class="skill-tag"><span class="dot dot-red"></span>PCI DSS</span>
+            <span class="skill-tag"><span class="dot dot-red"></span>SOX</span>
+            <span class="skill-tag"><span class="dot dot-orange"></span>ISO 27001</span>
+            <span class="skill-tag"><span class="dot dot-purple"></span>Zero Trust</span>
+            <span class="skill-tag"><span class="dot dot-blue"></span>IAM / RBAC</span>
+            <span class="skill-tag"><span class="dot dot-cyan"></span>Secrets Management</span>
+            <span class="skill-tag"><span class="dot dot-red"></span>WAF / DDoS</span>
+            <span class="skill-tag"><span class="dot dot-green"></span>Encryption at Rest & Transit</span>
+          </div>
+        </div>
+        <div class="skill-category fade-in">
+          <h3>// observability & traceability</h3>
+          <div class="skill-tags">
+            <span class="skill-tag"><span class="dot dot-blue"></span>Prometheus</span>
+            <span class="skill-tag"><span class="dot dot-orange"></span>Grafana</span>
+            <span class="skill-tag"><span class="dot dot-purple"></span>ELK Stack</span>
+            <span class="skill-tag"><span class="dot dot-cyan"></span>CloudWatch</span>
+            <span class="skill-tag"><span class="dot dot-blue"></span>Azure Monitor</span>
+            <span class="skill-tag"><span class="dot dot-red"></span>Sentry</span>
+            <span class="skill-tag"><span class="dot dot-green"></span>Distributed Tracing</span>
+            <span class="skill-tag"><span class="dot dot-orange"></span>Audit Trails</span>
+          </div>
+        </div>
+        <div class="skill-category fade-in">
+          <h3>// ci/cd & automation</h3>
+          <div class="skill-tags">
+            <span class="skill-tag"><span class="dot dot-green"></span>GitHub Actions</span>
+            <span class="skill-tag"><span class="dot dot-blue"></span>GitLab CI</span>
+            <span class="skill-tag"><span class="dot dot-orange"></span>Jenkins</span>
+            <span class="skill-tag"><span class="dot dot-cyan"></span>ArgoCD</span>
+            <span class="skill-tag"><span class="dot dot-purple"></span>GitOps</span>
+            <span class="skill-tag"><span class="dot dot-red"></span>DevSecOps</span>
+          </div>
+        </div>
+        <div class="skill-category fade-in">
+          <h3>// backend & data</h3>
           <div class="skill-tags">
             <span class="skill-tag"><span class="dot dot-red"></span>Ruby on Rails</span>
-            <span class="skill-tag"><span class="dot dot-red"></span>Ruby</span>
             <span class="skill-tag"><span class="dot dot-green"></span>NodeJS</span>
-            <span class="skill-tag"><span class="dot dot-purple"></span>PHP</span>
-          </div>
-        </div>
-        <div class="skill-category fade-in">
-          <h3>// databases</h3>
-          <div class="skill-tags">
             <span class="skill-tag"><span class="dot dot-blue"></span>PostgreSQL</span>
-            <span class="skill-tag"><span class="dot dot-green"></span>MongoDB</span>
             <span class="skill-tag"><span class="dot dot-orange"></span>MySQL</span>
-            <span class="skill-tag"><span class="dot dot-blue"></span>SQL</span>
-          </div>
-        </div>
-        <div class="skill-category fade-in">
-          <h3>// tools & platforms</h3>
-          <div class="skill-tags">
-            <span class="skill-tag"><span class="dot dot-orange"></span>Firebase</span>
-            <span class="skill-tag"><span class="dot dot-cyan"></span>Linux</span>
-            <span class="skill-tag"><span class="dot dot-red"></span>Git</span>
-            <span class="skill-tag"><span class="dot dot-blue"></span>AWS</span>
-            <span class="skill-tag"><span class="dot dot-blue"></span>Azure</span>
-            <span class="skill-tag"><span class="dot dot-green" data-i18n="skills.pm">Project Management</span>
+            <span class="skill-tag"><span class="dot dot-green"></span>MongoDB</span>
+            <span class="skill-tag"><span class="dot dot-purple"></span>Redis</span>
+            <span class="skill-tag"><span class="dot dot-cyan"></span>Event-Driven Architecture</span>
           </div>
         </div>
       </div>
@@ -824,7 +883,7 @@
         <!-- LOMAX -->
         <div class="timeline-item current fade-in">
           <div class="timeline-header">
-            <h3>Team Lead <span class="company">@ LOMAX Technologies S.A.</span></h3>
+            <h3>Software Architect / Team Lead <span class="company">@ LOMAX Technologies S.A.</span></h3>
             <div class="meta">
               <span data-i18n="exp.lomax.dates">May 2018 -- Present</span>
               <span>Guatemala City</span>
@@ -832,9 +891,12 @@
           </div>
           <div class="timeline-body">
             <ul>
-              <li data-i18n="exp.lomax.1">Provided leadership, guidance, and mentorship to a team of Ruby software engineers, resulting in a <span class="highlight">150% increase in productivity</span></li>
-              <li data-i18n="exp.lomax.2">Facilitated collaboration between cross-functional teams to ensure successful completion of project milestones</li>
-              <li data-i18n="exp.lomax.3">Held regular meetings to ensure alignment with workflow and to ensure team members were on track to meet deadlines</li>
+              <li data-i18n="exp.lomax.1">Design secure, multi-tenant cloud architectures on AWS and Azure for banking and financial clients, ensuring compliance with PCI DSS, SOX, and local banking regulations</li>
+              <li data-i18n="exp.lomax.2">Implement Infrastructure as Code with Terraform and CloudFormation, reducing environment provisioning time by <span class="highlight">70%</span> and eliminating configuration drift</li>
+              <li data-i18n="exp.lomax.3">Deploy and operate Kubernetes clusters (EKS/AKS) with hardened pod security policies, network policies, and secrets management for sensitive workloads</li>
+              <li data-i18n="exp.lomax.4">Build observability stacks using Prometheus, Grafana, CloudWatch, and ELK to deliver centralized monitoring, alerting, and full audit traceability</li>
+              <li data-i18n="exp.lomax.5">Define IAM governance, encryption standards, and VPC/network segmentation aligned with Zero Trust principles for financial-grade environments</li>
+              <li data-i18n="exp.lomax.6">Lead cross-functional teams of backend and DevOps engineers, mentoring on secure coding practices, CI/CD pipelines, and incident response procedures</li>
             </ul>
           </div>
         </div>
@@ -842,7 +904,7 @@
         <!-- Learn.xyz -->
         <div class="timeline-item fade-in">
           <div class="timeline-header">
-            <h3>Software Engineer <span class="company">@ Learn.xyz</span></h3>
+            <h3>Senior Software Engineer <span class="company">@ Learn.xyz</span></h3>
             <div class="meta">
               <span data-i18n="exp.learn.dates">Apr 2024 -- Nov 2024</span>
               <span>Guatemala City</span>
@@ -850,11 +912,11 @@
           </div>
           <div class="timeline-body">
             <ul>
-              <li data-i18n="exp.learn.1">Developed and maintained the main product composed of mobile application, BaaS, and Web application</li>
-              <li data-i18n="exp.learn.2">Reduced loading times for the mobile application by <span class="highlight">60%</span></li>
-              <li data-i18n="exp.learn.3">Implemented features like files manager, users management, and invitations system</li>
-              <li data-i18n="exp.learn.4">Refactored and improved around <span class="highlight">30% of the codebase</span></li>
-              <li data-i18n="exp.learn.5">Implemented logging and tracking systems with PostHog and Sentry</li>
+              <li data-i18n="exp.learn.1">Architected the backend and BaaS layer of an ed-tech platform serving mobile and web clients, applying scalable event-driven patterns</li>
+              <li data-i18n="exp.learn.2">Reduced mobile loading times by <span class="highlight">60%</span> through caching strategies, query optimization, and CDN integration</li>
+              <li data-i18n="exp.learn.3">Implemented structured logging, error tracking with Sentry, and product analytics with PostHog to support traceability and data-driven decisions</li>
+              <li data-i18n="exp.learn.4">Refactored approximately <span class="highlight">30% of the codebase</span> to improve maintainability, security posture, and test coverage</li>
+              <li data-i18n="exp.learn.5">Collaborated on CI/CD automation and deployment pipelines, ensuring repeatable and auditable releases</li>
             </ul>
           </div>
         </div>
@@ -870,11 +932,11 @@
           </div>
           <div class="timeline-body">
             <ul>
-              <li data-i18n="exp.hyrd.1">Collaborated with cross-functional teams to identify customer requirements and develop technical solutions</li>
-              <li data-i18n="exp.hyrd.2">Developed an MVP used to validate customer feedback and identify product enhancements</li>
-              <li data-i18n="exp.hyrd.3">Built an API enabling seamless integration with third-party services and increased system scalability</li>
-              <li data-i18n="exp.hyrd.4">Developed a Ruby on Rails web application that increased customer engagement by <span class="highlight">200%</span></li>
-              <li data-i18n="exp.hyrd.5">Optimized website features to ensure compatibility with multiple browsers and devices</li>
+              <li data-i18n="exp.hyrd.1">Designed and delivered scalable APIs and integrations with third-party HR and payroll systems under European data-protection requirements</li>
+              <li data-i18n="exp.hyrd.2">Built an MVP to validate product-market fit and iteratively evolved it into a production-grade multi-tenant SaaS platform</li>
+              <li data-i18n="exp.hyrd.3">Improved system observability with logging, metrics, and alerting, reducing mean time to detect (MTTD) incidents by <span class="highlight">40%</span></li>
+              <li data-i18n="exp.hyrd.4">Developed a Ruby on Rails application that increased customer engagement by <span class="highlight">200%</span> while maintaining security best practices</li>
+              <li data-i18n="exp.hyrd.5">Advocated for infrastructure automation, containerization, and reproducible deployment workflows across the engineering team</li>
             </ul>
           </div>
         </div>
@@ -890,11 +952,10 @@
           </div>
           <div class="timeline-body">
             <ul>
-              <li data-i18n="exp.mullen.1">Developed a responsive website for a major e-commerce company that increased user engagement by <span class="highlight">120%</span></li>
-              <li data-i18n="exp.mullen.2">Optimized web page loading times by <span class="highlight">90%</span>, improving user experience</li>
-              <li data-i18n="exp.mullen.3">Developed a CMS for a media company that reduced maintenance costs by <span class="highlight">75%</span></li>
-              <li data-i18n="exp.mullen.4">Built an API connecting the web application with third-party services for real-time data exchange</li>
-              <li data-i18n="exp.mullen.5">Implemented responsive design ensuring accessibility on all devices</li>
+              <li data-i18n="exp.mullen.1">Delivered high-traffic e-commerce and CMS platforms with <span class="highlight">120%</span> increase in user engagement and optimized performance</li>
+              <li data-i18n="exp.mullen.2">Reduced page load times by <span class="highlight">90%</span> through caching, asset optimization, and CDN usage</li>
+              <li data-i18n="exp.mullen.3">Built APIs and integrations for real-time data exchange, applying secure authentication and input-validation patterns</li>
+              <li data-i18n="exp.mullen.4">Implemented responsive, accessible designs and collaborated with QA to maintain release stability</li>
             </ul>
           </div>
         </div>
@@ -910,10 +971,10 @@
           </div>
           <div class="timeline-body">
             <ul>
-              <li data-i18n="exp.kronos.1">Developed a RESTful API handling over <span class="highlight">1M+ requests/day</span> with response times under 170ms</li>
-              <li data-i18n="exp.kronos.2">Optimized database queries to reduce response times by <span class="highlight">97%</span></li>
-              <li data-i18n="exp.kronos.3">Implemented automated monitoring and alerting to quickly identify and resolve system issues</li>
-              <li data-i18n="exp.kronos.4">Created a custom logging system for debugging and analytics</li>
+              <li data-i18n="exp.kronos.1">Developed a RESTful API handling over <span class="highlight">1M+ requests/day</span> with sub-170ms response times for transactional workloads</li>
+              <li data-i18n="exp.kronos.2">Optimized database queries to reduce response times by <span class="highlight">97%</span>, directly improving user experience and system stability</li>
+              <li data-i18n="exp.kronos.3">Implemented automated monitoring and alerting to quickly identify and resolve production issues</li>
+              <li data-i18n="exp.kronos.4">Created a centralized logging system that supported debugging, operational analytics, and audit review</li>
             </ul>
           </div>
         </div>
@@ -930,8 +991,8 @@
           <div class="timeline-body">
             <ul>
               <li data-i18n="exp.frisco.1">Created and maintained product documentation, including user manuals, help guides, and FAQs</li>
-              <li data-i18n="exp.frisco.2">Wrote documentation describing the technical architecture of applications</li>
-              <li data-i18n="exp.frisco.3">Developed a custom library that increased developer productivity and code reuse</li>
+              <li data-i18n="exp.frisco.2">Wrote technical architecture documentation that supported onboarding, compliance reviews, and knowledge transfer</li>
+              <li data-i18n="exp.frisco.3">Developed a reusable internal library that increased developer productivity and standardized common patterns</li>
             </ul>
           </div>
         </div>
@@ -975,6 +1036,19 @@
       <div class="extra-grid">
 
         <div class="extra-card fade-in">
+          <h3>Cloud & Architecture Consultant</h3>
+          <div class="company">Freelance / Multiple Clients</div>
+          <div class="dates" data-i18n="extra.consul.dates">Ongoing</div>
+          <p data-i18n="extra.consul.desc">Advise financial services and fintech clients on cloud migrations, security hardening, compliance alignment, and platform architecture.</p>
+          <ul>
+            <li data-i18n="extra.consul.1">Design landing zones and account structures on AWS/Azure following banking segregation and governance requirements</li>
+            <li data-i18n="extra.consul.2">Define observability and audit-trail strategies to satisfy internal risk teams and external auditors</li>
+            <li data-i18n="extra.consul.3">Implement Terraform modules and CI/CD templates that enforce security gates, secret scanning, and policy-as-code checks</li>
+            <li data-i18n="extra.consul.4">Troubleshoot performance and resilience bottlenecks in production workloads running on Kubernetes</li>
+          </ul>
+        </div>
+
+        <div class="extra-card fade-in">
           <h3>Senior Software Developer</h3>
           <div class="company">CODE Crypto Marketing S.A.</div>
           <div class="dates">Nov 2021 -- Dec 2022</div>
@@ -998,19 +1072,6 @@
           </ul>
         </div>
 
-        <div class="extra-card fade-in">
-          <h3 data-i18n="extra.consul.role">Software Consultant &amp; Problem Solver</h3>
-          <div class="company" data-i18n="extra.consul.company">Freelance / Multiple Clients</div>
-          <div class="dates" data-i18n="extra.consul.dates">Ongoing</div>
-          <p data-i18n="extra.consul.desc">Consultant and problem solver for key factors of productive client and internal applications, identifying critical bottlenecks and delivering targeted solutions.</p>
-          <ul>
-            <li data-i18n="extra.consul.1">Diagnosed and resolved critical performance issues in production applications for multiple clients</li>
-            <li data-i18n="extra.consul.2">Advised on architecture decisions and technology stack selection aligned with business goals</li>
-            <li data-i18n="extra.consul.3">Identified and fixed key bottlenecks in internal workflows and deployment pipelines</li>
-            <li data-i18n="extra.consul.4">Provided strategic guidance on scalability, security, and maintainability of existing systems</li>
-          </ul>
-        </div>
-
       </div>
     </div>
   </section>
@@ -1024,7 +1085,7 @@
         <span class="line"></span>
       </div>
       <div class="contact-content fade-in">
-        <p data-i18n="contact.desc">I'm always open to discussing new projects, opportunities, or ways to contribute to your team. Feel free to reach out.</p>
+        <p data-i18n="contact.desc">I'm open to architecture, cloud, and platform leadership roles in banking, fintech, and regulated industries. Let's talk.</p>
         <div class="contact-links">
           <a href="mailto:josuemente@hotmail.com" class="contact-link">josuemente@hotmail.com</a>
           <a href="tel:+50232281546" class="contact-link">+502 32281546</a>
@@ -1049,54 +1110,55 @@
         "nav.education": "Education",
         "nav.contact": "Contact",
         "hero.title": 'Hi, I\'m <span class="accent">Josue Mente</span>',
-        "hero.subtitle": "Tech Lead building scalable web solutions with 10+ years of hands-on experience across the full stack.",
+        "hero.subtitle": "Software & Cloud Architect designing secure, compliant, and scalable systems for banking and financial services.",
         "hero.cta1": "Get in Touch",
         "hero.cta2": "View Experience",
         "profile.title": "Profile",
-        "profile.p1": "With over 10 years of experience as a Senior Web Developer, I've built a career around mastering a wide range of technologies and platforms, including Vue.js, React.js, AWS, Azure, PHP, Ruby on Rails, and Firebase.",
-        "profile.p2": "I'm passionate about what I do and committed to delivering efficient, scalable solutions for each project. I also enjoy advising companies on their software development initiatives, helping them align technical decisions with business goals.",
-        "profile.p3": "Learning new tools, methodologies, and techniques is key to my approach -- staying up-to-date lets me bring the latest innovations to both my personal projects and client work, ensuring high-impact results every time.",
+        "profile.p1": "I am a Software Architect and Cloud Architect with 10+ years of experience designing, deploying, and operating mission-critical platforms on AWS and Azure. My work is strongly oriented toward regulated environments such as banking, fintech, and financial services.",
+        "profile.p2": "I help organizations build cloud-native architectures that meet strict security, traceability, and auditability standards. I have hands-on experience implementing compliance controls aligned with PCI DSS, SOX, ISO 27001, and banking regulatory frameworks, covering IAM, encryption, logging, monitoring, and audit trails.",
+        "profile.p3": "I specialize in infrastructure as code (Terraform), container orchestration (Kubernetes, EKS, AKS), CI/CD automation, observability stacks, and Zero Trust security models. I bridge deep technical execution with high-level architecture decisions to deliver reliable, cost-efficient, and regulatorily sound systems.",
         "profile.languages": "languages",
         "profile.languagesVal": "Spanish, English",
-        "hobby.videogames": "Videogames",
-        "hobby.cs": "Computer Science",
-        "hobby.ai": "AI Content Generation",
-        "hobby.print": "3D Print",
+        "hobby.cloud": "Cloud Architecture",
+        "hobby.security": "Security & Compliance",
+        "hobby.obs": "Observability",
+        "hobby.iac": "Infrastructure as Code",
         "skills.title": "Skills",
-        "skills.pm": "Project Management",
         "exp.title": "Employment History",
         "exp.lomax.dates": "May 2018 -- Present",
-        "exp.lomax.1": 'Provided leadership, guidance, and mentorship to a team of Ruby software engineers, resulting in a <span class="highlight">150% increase in productivity</span>',
-        "exp.lomax.2": "Facilitated collaboration between cross-functional teams to ensure successful completion of project milestones",
-        "exp.lomax.3": "Held regular meetings to ensure alignment with workflow and to ensure team members were on track to meet deadlines",
+        "exp.lomax.1": "Design secure, multi-tenant cloud architectures on AWS and Azure for banking and financial clients, ensuring compliance with PCI DSS, SOX, and local banking regulations",
+        "exp.lomax.2": "Implement Infrastructure as Code with Terraform and CloudFormation, reducing environment provisioning time by <span class=\"highlight\">70%</span> and eliminating configuration drift",
+        "exp.lomax.3": "Deploy and operate Kubernetes clusters (EKS/AKS) with hardened pod security policies, network policies, and secrets management for sensitive workloads",
+        "exp.lomax.4": "Build observability stacks using Prometheus, Grafana, CloudWatch, and ELK to deliver centralized monitoring, alerting, and full audit traceability",
+        "exp.lomax.5": "Define IAM governance, encryption standards, and VPC/network segmentation aligned with Zero Trust principles for financial-grade environments",
+        "exp.lomax.6": "Lead cross-functional teams of backend and DevOps engineers, mentoring on secure coding practices, CI/CD pipelines, and incident response procedures",
         "exp.learn.dates": "Apr 2024 -- Nov 2024",
-        "exp.learn.1": "Developed and maintained the main product composed of mobile application, BaaS, and Web application",
-        "exp.learn.2": 'Reduced loading times for the mobile application by <span class="highlight">60%</span>',
-        "exp.learn.3": "Implemented features like files manager, users management, and invitations system",
-        "exp.learn.4": 'Refactored and improved around <span class="highlight">30% of the codebase</span>',
-        "exp.learn.5": "Implemented logging and tracking systems with PostHog and Sentry",
+        "exp.learn.1": "Architected the backend and BaaS layer of an ed-tech platform serving mobile and web clients, applying scalable event-driven patterns",
+        "exp.learn.2": "Reduced mobile loading times by <span class=\"highlight\">60%</span> through caching strategies, query optimization, and CDN integration",
+        "exp.learn.3": "Implemented structured logging, error tracking with Sentry, and product analytics with PostHog to support traceability and data-driven decisions",
+        "exp.learn.4": "Refactored approximately <span class=\"highlight\">30% of the codebase</span> to improve maintainability, security posture, and test coverage",
+        "exp.learn.5": "Collaborated on CI/CD automation and deployment pipelines, ensuring repeatable and auditable releases",
         "exp.hyrd.dates": "Aug 2019 -- Oct 2023",
-        "exp.hyrd.1": "Collaborated with cross-functional teams to identify customer requirements and develop technical solutions",
-        "exp.hyrd.2": "Developed an MVP used to validate customer feedback and identify product enhancements",
-        "exp.hyrd.3": "Built an API enabling seamless integration with third-party services and increased system scalability",
-        "exp.hyrd.4": 'Developed a Ruby on Rails web application that increased customer engagement by <span class="highlight">200%</span>',
-        "exp.hyrd.5": "Optimized website features to ensure compatibility with multiple browsers and devices",
+        "exp.hyrd.1": "Designed and delivered scalable APIs and integrations with third-party HR and payroll systems under European data-protection requirements",
+        "exp.hyrd.2": "Built an MVP to validate product-market fit and iteratively evolved it into a production-grade multi-tenant SaaS platform",
+        "exp.hyrd.3": "Improved system observability with logging, metrics, and alerting, reducing mean time to detect (MTTD) incidents by <span class=\"highlight\">40%</span>",
+        "exp.hyrd.4": "Developed a Ruby on Rails application that increased customer engagement by <span class=\"highlight\">200%</span> while maintaining security best practices",
+        "exp.hyrd.5": "Advocated for infrastructure automation, containerization, and reproducible deployment workflows across the engineering team",
         "exp.mullen.dates": "Dec 2015 -- Mar 2018",
-        "exp.mullen.1": 'Developed a responsive website for a major e-commerce company that increased user engagement by <span class="highlight">120%</span>',
-        "exp.mullen.2": 'Optimized web page loading times by <span class="highlight">90%</span>, improving user experience',
-        "exp.mullen.3": 'Developed a CMS for a media company that reduced maintenance costs by <span class="highlight">75%</span>',
-        "exp.mullen.4": "Built an API connecting the web application with third-party services for real-time data exchange",
-        "exp.mullen.5": "Implemented responsive design ensuring accessibility on all devices",
+        "exp.mullen.1": "Delivered high-traffic e-commerce and CMS platforms with <span class=\"highlight\">120%</span> increase in user engagement and optimized performance",
+        "exp.mullen.2": "Reduced page load times by <span class=\"highlight\">90%</span> through caching, asset optimization, and CDN usage",
+        "exp.mullen.3": "Built APIs and integrations for real-time data exchange, applying secure authentication and input-validation patterns",
+        "exp.mullen.4": "Implemented responsive, accessible designs and collaborated with QA to maintain release stability",
         "exp.kronos.dates": "Feb 2014 -- Nov 2015",
-        "exp.kronos.1": 'Developed a RESTful API handling over <span class="highlight">1M+ requests/day</span> with response times under 170ms',
-        "exp.kronos.2": 'Optimized database queries to reduce response times by <span class="highlight">97%</span>',
-        "exp.kronos.3": "Implemented automated monitoring and alerting to quickly identify and resolve system issues",
-        "exp.kronos.4": "Created a custom logging system for debugging and analytics",
+        "exp.kronos.1": "Developed a RESTful API handling over <span class=\"highlight\">1M+ requests/day</span> with sub-170ms response times for transactional workloads",
+        "exp.kronos.2": "Optimized database queries to reduce response times by <span class=\"highlight\">97%</span>, directly improving user experience and system stability",
+        "exp.kronos.3": "Implemented automated monitoring and alerting to quickly identify and resolve production issues",
+        "exp.kronos.4": "Created a centralized logging system that supported debugging, operational analytics, and audit review",
         "exp.frisco.role": 'Technical Documentation Writer <span class="company">@ FRISCO S.A.</span>',
         "exp.frisco.dates": "Sep 2013 -- Feb 2014",
         "exp.frisco.1": "Created and maintained product documentation, including user manuals, help guides, and FAQs",
-        "exp.frisco.2": "Wrote documentation describing the technical architecture of applications",
-        "exp.frisco.3": "Developed a custom library that increased developer productivity and code reuse",
+        "exp.frisco.2": "Wrote technical architecture documentation that supported onboarding, compliance reviews, and knowledge transfer",
+        "exp.frisco.3": "Developed a reusable internal library that increased developer productivity and standardized common patterns",
         "edu.title": "Education",
         "edu.kinal.degree": "Computer Science Bachelor",
         "edu.kinal.dates": "Feb 2011 -- Nov 2013",
@@ -1104,6 +1166,12 @@
         "edu.umg.dates": "Feb 2014 -- Jun 2016",
         "edu.umg.desc": "Chose to focus on gaining hands-on industry experience and expanding knowledge through relevant courses, developing practical skills applied in real-world situations.",
         "extra.title": "Extra-Curricular",
+        "extra.consul.dates": "Ongoing",
+        "extra.consul.desc": "Advise financial services and fintech clients on cloud migrations, security hardening, compliance alignment, and platform architecture.",
+        "extra.consul.1": "Design landing zones and account structures on AWS/Azure following banking segregation and governance requirements",
+        "extra.consul.2": "Define observability and audit-trail strategies to satisfy internal risk teams and external auditors",
+        "extra.consul.3": "Implement Terraform modules and CI/CD templates that enforce security gates, secret scanning, and policy-as-code checks",
+        "extra.consul.4": "Troubleshoot performance and resilience bottlenecks in production workloads running on Kubernetes",
         "extra.code.desc": 'Developed and maintained Xmas light shows for the brand "Gallo" by Cerveceria Centro Americana S.A.',
         "extra.code.1": "Built shows for the main Xmas tree and smaller trees across the capital city",
         "extra.code.2": "Refactored and reused previous routines for new songs and configurations",
@@ -1112,16 +1180,8 @@
         "extra.audience.1": "Rebuilt the questions set and answers schema",
         "extra.audience.2": "Reskinned the platform following new design specifications",
         "extra.audience.3": "Generated reports by country and summary of quizzes",
-        "extra.consul.role": "Software Consultant &amp; Problem Solver",
-        "extra.consul.company": "Freelance / Multiple Clients",
-        "extra.consul.dates": "Ongoing",
-        "extra.consul.desc": "Consultant and problem solver for key factors of productive client and internal applications, identifying critical bottlenecks and delivering targeted solutions.",
-        "extra.consul.1": "Diagnosed and resolved critical performance issues in production applications for multiple clients",
-        "extra.consul.2": "Advised on architecture decisions and technology stack selection aligned with business goals",
-        "extra.consul.3": "Identified and fixed key bottlenecks in internal workflows and deployment pipelines",
-        "extra.consul.4": "Provided strategic guidance on scalability, security, and maintainability of existing systems",
         "contact.title": "Get in Touch",
-        "contact.desc": "I'm always open to discussing new projects, opportunities, or ways to contribute to your team. Feel free to reach out."
+        "contact.desc": "I'm open to architecture, cloud, and platform leadership roles in banking, fintech, and regulated industries. Let's talk."
       },
       es: {
         "nav.profile": "Perfil",
@@ -1130,54 +1190,55 @@
         "nav.education": "Educacion",
         "nav.contact": "Contacto",
         "hero.title": 'Hola, soy <span class="accent">Josue Mente</span>',
-        "hero.subtitle": "Tech Lead construyendo soluciones web escalables con mas de 10 anos de experiencia practica en todo el stack.",
+        "hero.subtitle": "Arquitecto de Software y Cloud diseñando sistemas seguros, compliant y escalables para banca y servicios financieros.",
         "hero.cta1": "Contactame",
         "hero.cta2": "Ver Experiencia",
         "profile.title": "Perfil",
-        "profile.p1": "Con mas de 10 anos de experiencia como Desarrollador Web Senior, he construido mi carrera dominando una amplia gama de tecnologias y plataformas, incluyendo Vue.js, React.js, AWS, Azure, PHP, Ruby on Rails y Firebase.",
-        "profile.p2": "Me apasiona lo que hago y estoy comprometido con entregar soluciones eficientes y escalables para cada proyecto. Tambien disfruto asesorar a empresas en sus iniciativas de desarrollo de software, ayudandoles a alinear decisiones tecnicas con objetivos de negocio.",
-        "profile.p3": "Aprender nuevas herramientas, metodologias y tecnicas es clave en mi enfoque -- mantenerme actualizado me permite llevar las ultimas innovaciones tanto a mis proyectos personales como al trabajo con clientes, asegurando resultados de alto impacto.",
+        "profile.p1": "Soy Arquitecto de Software y Arquitecto Cloud con mas de 10 años de experiencia diseñando, desplegando y operando plataformas criticas en AWS y Azure. Mi trabajo esta orientado principalmente a entornos regulados como banca, fintech y servicios financieros.",
+        "profile.p2": "Ayudo a las organizaciones a construir arquitecturas cloud-native que cumplen con estrictos estandares de seguridad, trazabilidad y auditabilidad. Tengo experiencia practica implementando controles de cumplimiento alineados a PCI DSS, SOX, ISO 27001 y marcos regulatorios bancarios, cubriendo IAM, cifrado, logging, monitoreo y auditoria.",
+        "profile.p3": "Me especializo en infraestructura como codigo (Terraform), orquestacion de contenedores (Kubernetes, EKS, AKS), automatizacion CI/CD, stacks de observabilidad y modelos de seguridad Zero Trust. Conecto la ejecucion tecnica profunda con decisiones de arquitectura de alto nivel para entregar sistemas confiables, eficientes en costos y solidos desde el punto de vista regulatorio.",
         "profile.languages": "idiomas",
         "profile.languagesVal": "Espanol, Ingles",
-        "hobby.videogames": "Videojuegos",
-        "hobby.cs": "Ciencias de la Computacion",
-        "hobby.ai": "Generacion de Contenido con IA",
-        "hobby.print": "Impresion 3D",
+        "hobby.cloud": "Arquitectura Cloud",
+        "hobby.security": "Seguridad y Cumplimiento",
+        "hobby.obs": "Observabilidad",
+        "hobby.iac": "Infraestructura como Codigo",
         "skills.title": "Habilidades",
-        "skills.pm": "Gestion de Proyectos",
         "exp.title": "Historial Laboral",
         "exp.lomax.dates": "May 2018 -- Presente",
-        "exp.lomax.1": 'Liderazgo, orientacion y mentoria a un equipo de ingenieros de software Ruby, logrando un <span class="highlight">aumento del 150% en productividad</span>',
-        "exp.lomax.2": "Facilitacion de la colaboracion entre equipos multifuncionales para asegurar la finalizacion exitosa de hitos del proyecto",
-        "exp.lomax.3": "Reuniones regulares para asegurar alineacion con el flujo de trabajo y que el equipo cumpliera con los plazos",
+        "exp.lomax.1": "Diseno arquitecturas cloud multi-tenant seguras en AWS y Azure para clientes bancarios y financieros, asegurando cumplimiento con PCI DSS, SOX y regulaciones bancarias locales",
+        "exp.lomax.2": "Implemento Infraestructura como Codigo con Terraform y CloudFormation, reduciendo el tiempo de aprovisionamiento de ambientes en un <span class=\"highlight\">70%</span> y eliminando la deriva de configuracion",
+        "exp.lomax.3": "Despliego y opero clusters de Kubernetes (EKS/AKS) con politicas de seguridad de pods endurecidas, politicas de red y gestion de secretos para cargas de trabajo sensibles",
+        "exp.lomax.4": "Construyo stacks de observabilidad con Prometheus, Grafana, CloudWatch y ELK para entregar monitoreo centralizado, alertas y trazabilidad completa de auditoria",
+        "exp.lomax.5": "Defino gobernanza de IAM, estandares de cifrado y segmentacion VPC/red alineados a principios Zero Trust para entornos de grado financiero",
+        "exp.lomax.6": "Lidero equipos multifuncionales de backend y DevOps, mentorando en practicas de codigo seguro, pipelines CI/CD y procedimientos de respuesta a incidentes",
         "exp.learn.dates": "Abr 2024 -- Nov 2024",
-        "exp.learn.1": "Desarrollo y mantenimiento del producto principal compuesto por aplicacion movil, BaaS y aplicacion web",
-        "exp.learn.2": 'Reduccion de tiempos de carga de la aplicacion movil en un <span class="highlight">60%</span>',
-        "exp.learn.3": "Implementacion de funcionalidades como gestor de archivos, gestion de usuarios y sistema de invitaciones",
-        "exp.learn.4": 'Refactorizacion y mejora de aproximadamente el <span class="highlight">30% del codigo base</span>',
-        "exp.learn.5": "Implementacion de sistemas de logging y tracking con PostHog y Sentry",
+        "exp.learn.1": "Arquitecte el backend y la capa BaaS de una plataforma ed-tech que atiende clientes moviles y web, aplicando patrones event-driven escalables",
+        "exp.learn.2": "Reduje los tiempos de carga de la aplicacion movil en un <span class=\"highlight\">60%</span> mediante estrategias de cache, optimizacion de consultas e integracion de CDN",
+        "exp.learn.3": "Implemente logging estructurado, seguimiento de errores con Sentry y analitica de producto con PostHog para soportar trazabilidad y decisiones basadas en datos",
+        "exp.learn.4": "Refactorice aproximadamente el <span class=\"highlight\">30% del codigo base</span> para mejorar mantenibilidad, postura de seguridad y cobertura de pruebas",
+        "exp.learn.5": "Colabore en la automatizacion CI/CD y pipelines de despliegue, asegurando releases repetibles y auditables",
         "exp.hyrd.dates": "Ago 2019 -- Oct 2023",
-        "exp.hyrd.1": "Colaboracion con equipos multifuncionales para identificar requerimientos del cliente y desarrollar soluciones tecnicas",
-        "exp.hyrd.2": "Desarrollo de un MVP para validar retroalimentacion del cliente e identificar mejoras del producto",
-        "exp.hyrd.3": "Construccion de una API que permitio integracion fluida con servicios de terceros y mayor escalabilidad",
-        "exp.hyrd.4": 'Desarrollo de una aplicacion web en Ruby on Rails que incremento la participacion del cliente en un <span class="highlight">200%</span>',
-        "exp.hyrd.5": "Optimizacion de funcionalidades web para asegurar compatibilidad con multiples navegadores y dispositivos",
+        "exp.hyrd.1": "Disenee y entregue APIs escalables e integraciones con sistemas de RRHH y nomina de terceros bajo requisitos europeos de proteccion de datos",
+        "exp.hyrd.2": "Construi un MVP para validar product-market fit y lo evolucione iterativamente hacia una plataforma SaaS multi-tenant lista para produccion",
+        "exp.hyrd.3": "Mejore la observabilidad del sistema con logging, metricas y alertas, reduciendo el tiempo medio de deteccion (MTTD) de incidentes en un <span class=\"highlight\">40%</span>",
+        "exp.hyrd.4": "Desarrolle una aplicacion Ruby on Rails que incremento la participacion del cliente en un <span class=\"highlight\">200%</span> manteniendo las mejores practicas de seguridad",
+        "exp.hyrd.5": "Promovi la automatizacion de infraestructura, contenerizacion y flujos de despliegue reproducibles en todo el equipo de ingenieria",
         "exp.mullen.dates": "Dic 2015 -- Mar 2018",
-        "exp.mullen.1": 'Desarrollo de un sitio web responsive para una empresa de e-commerce que incremento la participacion del usuario en un <span class="highlight">120%</span>',
-        "exp.mullen.2": 'Optimizacion de tiempos de carga de paginas web en un <span class="highlight">90%</span>, mejorando la experiencia del usuario',
-        "exp.mullen.3": 'Desarrollo de un CMS para una empresa de medios que redujo costos de mantenimiento en un <span class="highlight">75%</span>',
-        "exp.mullen.4": "Construccion de una API conectando la aplicacion web con servicios de terceros para intercambio de datos en tiempo real",
-        "exp.mullen.5": "Implementacion de diseno responsive asegurando accesibilidad en todos los dispositivos",
+        "exp.mullen.1": "Entregue plataformas de e-commerce y CMS de alto trafico con un incremento del <span class=\"highlight\">120%</span> en participacion de usuarios y rendimiento optimizado",
+        "exp.mullen.2": "Reduje los tiempos de carga de paginas en un <span class=\"highlight\">90%</span> mediante cache, optimizacion de activos y uso de CDN",
+        "exp.mullen.3": "Construi APIs e integraciones para intercambio de datos en tiempo real, aplicando patrones de autenticacion segura y validacion de entradas",
+        "exp.mullen.4": "Implemente disenos responsivos y accesibles, colaborando con QA para mantener la estabilidad de los releases",
         "exp.kronos.dates": "Feb 2014 -- Nov 2015",
-        "exp.kronos.1": 'Desarrollo de una API RESTful manejando mas de <span class="highlight">1M+ solicitudes/dia</span> con tiempos de respuesta menores a 170ms',
-        "exp.kronos.2": 'Optimizacion de consultas de base de datos para reducir tiempos de respuesta en un <span class="highlight">97%</span>',
-        "exp.kronos.3": "Implementacion de monitoreo automatizado y alertas para identificar y resolver problemas del sistema rapidamente",
-        "exp.kronos.4": "Creacion de un sistema de logging personalizado para depuracion y analitica",
+        "exp.kronos.1": "Desarrolle una API RESTful manejando mas de <span class=\"highlight\">1M+ solicitudes/dia</span> con tiempos de respuesta menores a 170ms para cargas transaccionales",
+        "exp.kronos.2": "Optimice consultas de base de datos para reducir tiempos de respuesta en un <span class=\"highlight\">97%</span>, mejorando directamente la experiencia de usuario y estabilidad del sistema",
+        "exp.kronos.3": "Implemente monitoreo automatizado y alertas para identificar y resolver problemas de produccion rapidamente",
+        "exp.kronos.4": "Cree un sistema de logging centralizado que soporto depuracion, analitica operacional y revision de auditoria",
         "exp.frisco.role": 'Redactor de Documentacion Tecnica <span class="company">@ FRISCO S.A.</span>',
         "exp.frisco.dates": "Sep 2013 -- Feb 2014",
-        "exp.frisco.1": "Creacion y mantenimiento de documentacion de productos, incluyendo manuales de usuario, guias de ayuda y FAQs",
-        "exp.frisco.2": "Redaccion de documentacion describiendo la arquitectura tecnica de las aplicaciones",
-        "exp.frisco.3": "Desarrollo de una libreria personalizada que incremento la productividad del desarrollador y reutilizacion de codigo",
+        "exp.frisco.1": "Cree y mantuve documentacion de productos, incluyendo manuales de usuario, guias de ayuda y FAQs",
+        "exp.frisco.2": "Redacte documentacion de arquitectura tecnica que apoyo onboarding, revisiones de cumplimiento y transferencia de conocimiento",
+        "exp.frisco.3": "Desarrolle una libreria interna reutilizable que incremento la productividad del desarrollador y estandarizo patrones comunes",
         "edu.title": "Educacion",
         "edu.kinal.degree": "Bachillerato en Ciencias de la Computacion",
         "edu.kinal.dates": "Feb 2011 -- Nov 2013",
@@ -1185,6 +1246,12 @@
         "edu.umg.dates": "Feb 2014 -- Jun 2016",
         "edu.umg.desc": "Decidi enfocarme en obtener experiencia practica en la industria y expandir mis conocimientos a traves de cursos relevantes, desarrollando habilidades practicas aplicadas en situaciones reales.",
         "extra.title": "Actividades Extra-Curriculares",
+        "extra.consul.dates": "Continuo",
+        "extra.consul.desc": "Asesoro a clientes de servicios financieros y fintech en migraciones cloud, endurecimiento de seguridad, alineacion de cumplimiento y arquitectura de plataformas.",
+        "extra.consul.1": "Diseno landing zones y estructuras de cuentas en AWS/Azure siguiendo requisitos de segregacion y gobernanza bancaria",
+        "extra.consul.2": "Defino estrategias de observabilidad y auditoria para satisfacer a equipos de riesgo internos y auditores externos",
+        "extra.consul.3": "Implemento modulos de Terraform y plantillas CI/CD que refuerzan security gates, escaneo de secretos y validaciones de policy-as-code",
+        "extra.consul.4": "Resuelvo cuellos de botella de rendimiento y resiliencia en cargas de trabajo productivas sobre Kubernetes",
         "extra.code.desc": 'Desarrollo y mantenimiento de shows de luces navidenas para la marca "Gallo" de Cerveceria Centro Americana S.A.',
         "extra.code.1": "Construccion de shows para el arbol navideno principal y arboles mas pequenos en toda la ciudad capital",
         "extra.code.2": "Refactorizacion y reutilizacion de rutinas previas para nuevas canciones y configuraciones",
@@ -1193,16 +1260,8 @@
         "extra.audience.1": "Reconstruccion del esquema de preguntas y respuestas",
         "extra.audience.2": "Rediseno visual de la plataforma siguiendo nuevas especificaciones de diseno",
         "extra.audience.3": "Generacion de reportes por pais y resumen de quizzes realizados",
-        "extra.consul.role": "Consultor de Software &amp; Solucionador de Problemas",
-        "extra.consul.company": "Freelance / Multiples Clientes",
-        "extra.consul.dates": "Continuo",
-        "extra.consul.desc": "Consultor y solucionador de problemas para factores clave de aplicaciones productivas de clientes e internas, identificando cuellos de botella criticos y entregando soluciones dirigidas.",
-        "extra.consul.1": "Diagnostico y resolucion de problemas criticos de rendimiento en aplicaciones en produccion para multiples clientes",
-        "extra.consul.2": "Asesoria en decisiones de arquitectura y seleccion de stack tecnologico alineado con objetivos de negocio",
-        "extra.consul.3": "Identificacion y correccion de cuellos de botella clave en flujos de trabajo internos y pipelines de despliegue",
-        "extra.consul.4": "Orientacion estrategica sobre escalabilidad, seguridad y mantenibilidad de sistemas existentes",
         "contact.title": "Contacto",
-        "contact.desc": "Siempre estoy abierto a discutir nuevos proyectos, oportunidades o formas de contribuir a tu equipo. No dudes en contactarme."
+        "contact.desc": "Estoy abierto a roles de arquitectura, cloud y liderazgo de plataforma en banca, fintech e industrias reguladas. Hablemos."
       }
     };
 
